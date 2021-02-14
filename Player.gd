@@ -47,9 +47,16 @@ onready var animationPlayer = get_node("AnimPlayer")
 onready var anchor = get_node("../Anchor")
 onready var parent = get_owner()
 
+export var canMove = true
+export var isControlled = true
+var playerOnTop = null
+
 func _physics_process(delta):
-	if parent.get("canMove"):
-		if parent.get("isControlled"):
+	if playerOnTop != null:
+		var pos = get_global_position() + Vector2(0, -16)
+		playerOnTop.set_global_position(pos)
+	if canMove:
+		if isControlled:
 			run(delta)
 			jump(delta)
 			dash()
