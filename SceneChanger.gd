@@ -16,4 +16,4 @@ func change_scene(path, delay = 0.5):
 
 func _process(delta):
 	if(Input.is_action_pressed("ui_cancel")):
-		change_scene("res://main.tscn")
+		change_scene("res://Main.tscn")
