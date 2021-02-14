@@ -3,6 +3,9 @@ extends Node2D
 export(Array, NodePath) var player_root_nodes = []
 var currently_active_index = 0
 
+const PLAYER_COLLISION_SIZE_Y = -7.341
+const PLAYER_COLLISION_OFFSET_Y = 2.637
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,8 +31,10 @@ func stack_on_player(curr_player):
 			var curr_player_tree = get_player_tree(curr_player)
 			if not(curr_player in other_player_tree) and not(other_player in curr_player_tree):
 				other_player.set("can_move", false)
-				other_player.get_child(1).disabled = true
+				get_collision_shape(other_player).disabled = true
 				curr_player_tree[-1].player_on_top = other_player
+				resize_collision_shape(other_player)
+	resize_collision_shape(curr_player)
 
 func unstack_for_player(curr_player):
 	var player = curr_player.player_on_top
@@ -37,8 +42,20 @@ func unstack_for_player(curr_player):
 		# If unstack all players
 		# unstack_for_player(curr_player.player_on_top)
 		player.set("can_move", true)
-		player.get_child(1).disabled = false
+		get_collision_shape(player).disabled = false
 		curr_player.player_on_top = null
+		resize_collision_shape(player)
+	resize_collision_shape(curr_player)
+		
+func get_collision_shape(for_player):
+	return for_player.get_child(1)
+		
+func resize_collision_shape(for_player):
+	var cs = get_collision_shape(for_player)
+	var players_above = len(get_player_tree(for_player)) - 1
+	cs.position.y = PLAYER_COLLISION_OFFSET_Y + PLAYER_COLLISION_SIZE_Y * players_above
+	cs.scale.y = 1 + players_above
+	#print(cs.shape.x, cs.shape.y)
 		
 func get_current_player():
 	return get_players()[currently_active_index] 
@@ -68,9 +85,9 @@ func _process(delta: float) -> void:
 		stack_on_player(get_current_player())
 	if Input.is_action_just_pressed("unmerge_characters"):
 		unstack_for_player(get_current_player())
-	for action in ["down", "left", "right"]:
+	for action in ["down", "left", "right", "up"]:
 		if Input.is_action_just_pressed(action):
 			var p = find_which_player_is_stacked_below(get_current_player())
 			if p != null:
 				unstack_for_player(p)
-				continue
+				break
