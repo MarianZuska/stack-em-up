@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://HurtArea.gd" type="Script" id=1]
 [ext_resource path="res://PlayerController.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://SceneChanger.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Spikes.png" type="Texture" id=5]
 [ext_resource path="res://Tileset.png" type="Texture" id=6]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -491,3 +493,10 @@ shape = SubResource( 49 )
 
 [node name="Sprite" type="Sprite" parent="HurtArea"]
 texture = ExtResource( 5 )
+
+[node name="Button" parent="." instance=ExtResource( 7 )]
+position = Vector2( 201.25, 151.75 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 66.6238, 120 )
+button = NodePath("../Button")
