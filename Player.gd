@@ -45,19 +45,22 @@ var was_on_floor = true
 onready var sprite = get_node("Sprite")
 onready var animationPlayer = get_node("AnimPlayer")
 onready var anchor = get_node("../Anchor")
-
-export var canMove = true
+onready var parent = get_owner()
 
 func _physics_process(delta):
-	if canMove:
-		run(delta)
+	if parent.get("canMove"):
+		if parent.get("isControlled"):
+			run(delta)
+			jump(delta)
+			dash()
+		else:
+			xinput = 0
 		gravity(delta)
 		friction(delta)
-		jump(delta)
+
 		move_anchor(delta)
 		animate()
 		particles()
-		dash()
 	
 		close_down()
 		motion = move_and_slide(motion, Vector2.UP)
