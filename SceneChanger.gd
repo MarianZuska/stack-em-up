@@ -15,5 +15,5 @@ func change_scene(path, delay = 0.5):
 	emit_signal("scene_changed")
 
 func _process(delta):
-	if(Input.is_action_pressed("ui_cancel")):
-		change_scene("res://Main.tscn")
+	if Input.is_action_pressed("ui_cancel"):
+		change_scene(get_tree().current_scene.filename)

@@ -1,7 +1,5 @@
 extends Area2D
 
-export(String, FILE, "*.tscn") var scene
-
 var hasTriggered = false
 
 func _physics_process(delta):
@@ -10,4 +8,4 @@ func _physics_process(delta):
 		for body in bodies:
 			if body.name == "Player":
 				hasTriggered = true
-				SceneChanger.change_scene(scene, 0)
+				SceneChanger.change_scene(get_tree().current_scene.filename, 0)

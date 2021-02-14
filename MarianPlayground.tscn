@@ -484,7 +484,6 @@ position = Vector2( 262.706, 48.5617 )
 [node name="HurtArea" type="Area2D" parent="."]
 position = Vector2( 280, 120 )
 script = ExtResource( 1 )
-scene = "res://Main.tscn"
 
 [node name="Collider" type="CollisionShape2D" parent="HurtArea"]
 position = Vector2( 0, 5.6403 )
