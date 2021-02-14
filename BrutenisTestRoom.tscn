@@ -486,7 +486,6 @@ player_color = Color( 1, 0.984314, 0, 1 )
 [node name="HurtArea" type="Area2D" parent="."]
 position = Vector2( 280, 120 )
 script = ExtResource( 6 )
-scene = "res://Main.tscn"
 
 [node name="Collider" type="CollisionShape2D" parent="HurtArea"]
 position = Vector2( 0, 5.6403 )

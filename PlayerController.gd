@@ -50,7 +50,13 @@ func get_players(include_active=true):
 			continue
 		player_list.append(get_node(player_root_nodes[index]).get_child(0))
 	return player_list
-			
+
+func find_which_player_is_stacked_below(player_stacked_above):
+	for player in get_players():
+		if player != player_stacked_above:
+			if player.player_on_top == player_stacked_above:
+				return player
+	return null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -62,3 +68,9 @@ func _process(delta: float) -> void:
 		stack_on_player(get_current_player())
 	if Input.is_action_just_pressed("unmerge_characters"):
 		unstack_for_player(get_current_player())
+	for action in ["down", "left", "right"]:
+		if Input.is_action_just_pressed(action):
+			var p = find_which_player_is_stacked_below(get_current_player())
+			if p != null:
+				unstack_for_player(p)
+				continue
