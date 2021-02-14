@@ -25,15 +25,17 @@ func dist(p1, p2):
 	return abs(p1.get_global_position().distance_to(p2.get_global_position()))
 	
 func stack_on_player(curr_player):
-	for other_player in get_players(false):
-		if dist(curr_player, other_player) < 20:
-			var other_player_tree = get_player_tree(other_player)
-			var curr_player_tree = get_player_tree(curr_player)
-			if not(curr_player in other_player_tree) and not(other_player in curr_player_tree):
-				other_player.set("can_move", false)
-				get_collision_shape(other_player).disabled = true
-				curr_player_tree[-1].player_on_top = other_player
-				resize_collision_shape(other_player)
+	for other_player in get_players():
+		if curr_player != other_player and find_which_player_is_stacked_below(other_player) == null:
+			if dist(curr_player, other_player) < 20:
+				var other_player_tree = get_player_tree(other_player)
+				var curr_player_tree = get_player_tree(curr_player)
+				if not(curr_player in other_player_tree) and not(other_player in curr_player_tree):
+					other_player.set("can_move", false)
+					get_collision_shape(other_player).disabled = true
+					curr_player_tree[-1].player_on_top = other_player
+					resize_collision_shape(other_player)
+					break
 	resize_collision_shape(curr_player)
 
 func unstack_for_player(curr_player):
@@ -45,7 +47,7 @@ func unstack_for_player(curr_player):
 		get_collision_shape(player).disabled = false
 		curr_player.player_on_top = null
 		resize_collision_shape(player)
-	resize_collision_shape(curr_player)
+		resize_collision_shape(curr_player)
 		
 func get_collision_shape(for_player):
 	return for_player.get_child(1)

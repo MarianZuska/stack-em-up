@@ -56,7 +56,9 @@ func _physics_process(delta):
 	if is_controlled:
 		sprite.modulate = parent.player_color
 	else:	
-		sprite.modulate = Color(1, 1, 1)
+		var c = parent.player_color / 3 
+		c[3] = 1
+		sprite.modulate = c
 
 	if can_move:
 		if is_controlled:
