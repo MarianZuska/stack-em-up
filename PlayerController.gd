@@ -1,43 +1,49 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
-
 export(Array, NodePath) var player_root_nodes = []
 var currently_active_index = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_activate_player()
+	activate_player()
 
-func _activate_player():
-	var players = _get_players()
+func activate_player():
+	var players = get_players()
 	for index in range(len(players)):
-		players[index].set("isControlled", index == currently_active_index)
-
-func _merge_player(curr_player):
-	for player in _get_players(false):
-		var dist = curr_player.get_global_position().distance_to(player.get_global_position())
-		if abs(dist) < 20:
-			player.set("canMove", false)
-			player.get_child(1).disabled = true
-			curr_player.playerOnTop = player
-
-func _unmerge_player(curr_player):
-	var player = curr_player.playerOnTop
-	if player != null:
-		_unmerge_player(curr_player.playerOnTop)
-		player.set("canMove", true)
-		player.get_child(1).disabled = false
-		curr_player.playerOnTop = null
+		players[index].set("is_controlled", index == currently_active_index)
 		
-func _get_current_player():
-	return _get_players()[currently_active_index] 
+func get_player_tree(reference_player):
+	if reference_player == null:
+		return []
+	return [reference_player] + get_player_tree(reference_player.player_on_top)
+	
+func dist(p1, p2):
+	return abs(p1.get_global_position().distance_to(p2.get_global_position()))
+	
+func stack_on_player(curr_player):
+	for other_player in get_players(false):
+		if dist(curr_player, other_player) < 20:
+			var other_player_tree = get_player_tree(other_player)
+			var curr_player_tree = get_player_tree(curr_player)
+			if not(curr_player in other_player_tree) and not(other_player in curr_player_tree):
+				other_player.set("can_move", false)
+				other_player.get_child(1).disabled = true
+				curr_player_tree[-1].player_on_top = other_player
+
+func unstack_for_player(curr_player):
+	var player = curr_player.player_on_top
+	if player != null:
+		# If unstack all players
+		# unstack_for_player(curr_player.player_on_top)
+		player.set("can_move", true)
+		player.get_child(1).disabled = false
+		curr_player.player_on_top = null
+		
+func get_current_player():
+	return get_players()[currently_active_index] 
 			
-func _get_players(include_active=true):
+func get_players(include_active=true):
 	var player_list = []
 	for index in range(len(player_root_nodes)):
 		if not include_active && currently_active_index == index:
@@ -51,8 +57,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("swap_character"):
 		currently_active_index += 1
 		currently_active_index %= len(player_root_nodes)
-		_activate_player()
+		activate_player()
 	if Input.is_action_just_pressed("merge_characters"):
-		_merge_player(_get_current_player())
+		stack_on_player(get_current_player())
 	if Input.is_action_just_pressed("unmerge_characters"):
-		_unmerge_player(_get_current_player())
+		unstack_for_player(get_current_player())

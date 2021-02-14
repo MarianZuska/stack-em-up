@@ -40,6 +40,7 @@ var dashDir = Vector2.ZERO
 var dashing = false
 
 var jumpingNow = false
+var player_on_top = null
 var was_on_floor = true
 
 onready var sprite = get_node("Sprite")
@@ -47,16 +48,18 @@ onready var animationPlayer = get_node("AnimPlayer")
 onready var anchor = get_node("../Anchor")
 onready var parent = get_owner()
 
-export var canMove = true
-export var isControlled = true
-var playerOnTop = null
+var can_move = true
+var is_controlled = true
 
 func _physics_process(delta):
-	if playerOnTop != null:
-		var pos = get_global_position() + Vector2(0, -16)
-		playerOnTop.set_global_position(pos)
-	if canMove:
-		if isControlled:
+	
+	if is_controlled:
+		sprite.modulate = parent.player_color
+	else:	
+		sprite.modulate = Color(1, 1, 1)
+
+	if can_move:
+		if is_controlled:
 			run(delta)
 			jump(delta)
 			dash()
@@ -71,7 +74,11 @@ func _physics_process(delta):
 	
 		close_down()
 		motion = move_and_slide(motion, Vector2.UP)
-		
+	if player_on_top != null:
+		var pos = get_global_position() + Vector2(0, -16)
+		player_on_top.set_global_position(pos)
+		player_on_top.sprite.flip_h = sprite.flip_h
+
 
 func close_down():
 	was_on_floor = is_on_floor()
