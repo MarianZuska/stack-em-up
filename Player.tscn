@@ -1,14 +1,113 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.97122, 7.361 )
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="Animation" id=5]
+resource_name = "Dash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[sub_resource type="Animation" id=4]
+resource_name = "Jump"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
 
-[node name="Sprite" type="Sprite" parent="."]
+[sub_resource type="Animation" id=3]
+resource_name = "Run"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 3 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Stand"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="PlayerRoot" type="Node2D"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 1 )
 hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 0, 2.588 )
+shape = SubResource( 1 )
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="Player"]
+anims/Dash = SubResource( 5 )
+anims/Jump = SubResource( 4 )
+anims/Run = SubResource( 3 )
+anims/Stand = SubResource( 2 )
+
+[node name="TopLeft" type="RayCast2D" parent="Player"]
+position = Vector2( 0, -4 )
+rotation = 1.5708
+cast_to = Vector2( 0, 3 )
+
+[node name="TopRight" type="RayCast2D" parent="Player"]
+position = Vector2( 0, -4 )
+rotation = 1.5708
+cast_to = Vector2( 0, -3 )
+
+[node name="BottomLeft" type="RayCast2D" parent="Player"]
+position = Vector2( 0, 4 )
+rotation = 1.5708
+cast_to = Vector2( 0, 3 )
+
+[node name="BottomRight" type="RayCast2D" parent="Player"]
+position = Vector2( 0, 4 )
+rotation = 1.5708
+cast_to = Vector2( 0, -3 )
+
+[node name="Anchor" type="Node2D" parent="."]
