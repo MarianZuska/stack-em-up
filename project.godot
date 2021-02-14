@@ -19,6 +19,10 @@ config/name="brackeys-game-jam-2021"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneChanger="*res://SceneChanger.tscn"
+
 [display]
 
 window/size/width=320
