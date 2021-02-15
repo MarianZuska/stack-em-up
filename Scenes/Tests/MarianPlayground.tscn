@@ -489,3 +489,4 @@ buttonsNeeded = 1
 
 [node name="Spikes" parent="." instance=ExtResource( 1 )]
 position = Vector2( 280.794, 120.643 )
+color = Color( 0.254902, 0.533333, 0.254902, 1 )
