@@ -4,8 +4,6 @@
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Objects/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Resources/Sprites/Spikes.png" type="Texture" id=5]
-[ext_resource path="res://Scripts/HurtArea.gd" type="Script" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -456,8 +454,25 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
+[sub_resource type="GDScript" id=51]
+script/source = "extends Area2D
+
+var hasTriggered = false
+
+func _physics_process(delta):
+	if not hasTriggered:
+		var bodies = get_overlapping_bodies()
+		for body in bodies:
+			if body.name == \"Player\":
+				hasTriggered = true
+				SceneChanger.change_scene(get_tree().current_scene.filename, 0)
+"
+
 [sub_resource type="RectangleShape2D" id=49]
 extents = Vector2( 6.70349, 2.25337 )
+
+[sub_resource type="StreamTexture" id=50]
+load_path = "res://.import/Spikes.png-dbfc6050dce19d3cc4a486b2a4ba28ba.stex"
 
 [node name="World" type="Node2D"]
 
@@ -485,11 +500,11 @@ player_color = Color( 1, 0.984314, 0, 1 )
 
 [node name="HurtArea" type="Area2D" parent="."]
 position = Vector2( 280, 120 )
-script = ExtResource( 6 )
+script = SubResource( 51 )
 
 [node name="Collider" type="CollisionShape2D" parent="HurtArea"]
 position = Vector2( 0, 5.6403 )
 shape = SubResource( 49 )
 
 [node name="Sprite" type="Sprite" parent="HurtArea"]
-texture = ExtResource( 5 )
+texture = SubResource( 50 )
