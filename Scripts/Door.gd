@@ -3,15 +3,14 @@ extends StaticBody2D
 export(Array, NodePath) var buttons
 export(int) var buttons_needed = 1
 export(bool) var do_invert = false
-export(Color) var color = Color.white
 
 onready var collision_shape = $CollisionShape2D
 onready var sprite = $Sprite
+onready var initial_modulate = modulate
 
 func _ready():
-	modulate = color
 	for button in buttons:
-		get_node(button).modulate = color
+		get_node(button).modulate = modulate
 
 func _process(delta):
 	var count = 0
@@ -31,4 +30,4 @@ func _process(delta):
 		sprite.modulate = Color.transparent
 	else:
 		collision_shape.disabled = false
-		sprite.modulate = color
+		sprite.modulate = initial_modulate

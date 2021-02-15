@@ -454,7 +454,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
-[sub_resource type="GDScript" id=51]
+[sub_resource type="GDScript" id=49]
 script/source = "extends Area2D
 
 var hasTriggered = false
@@ -468,10 +468,10 @@ func _physics_process(delta):
 				SceneChanger.change_scene(get_tree().current_scene.filename, 0)
 "
 
-[sub_resource type="RectangleShape2D" id=49]
+[sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 6.70349, 2.25337 )
 
-[sub_resource type="StreamTexture" id=50]
+[sub_resource type="StreamTexture" id=51]
 load_path = "res://.import/Spikes.png-dbfc6050dce19d3cc4a486b2a4ba28ba.stex"
 
 [node name="World" type="Node2D"]
@@ -500,11 +500,11 @@ player_color = Color( 1, 0.984314, 0, 1 )
 
 [node name="HurtArea" type="Area2D" parent="."]
 position = Vector2( 280, 120 )
-script = SubResource( 51 )
+script = SubResource( 49 )
 
 [node name="Collider" type="CollisionShape2D" parent="HurtArea"]
 position = Vector2( 0, 5.6403 )
-shape = SubResource( 49 )
+shape = SubResource( 50 )
 
 [node name="Sprite" type="Sprite" parent="HurtArea"]
-texture = SubResource( 50 )
+texture = SubResource( 51 )
