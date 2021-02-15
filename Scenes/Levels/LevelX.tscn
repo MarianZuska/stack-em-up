@@ -473,7 +473,7 @@ player_root_nodes = [ NodePath("../Player"), NodePath("../Player2") ]
 position = Vector2( 231.077, 21.4048 )
 
 [node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 265.761, 21.6801 )
+position = Vector2( 266.51, 22.0547 )
 
 [node name="SceneChanger" parent="." instance=ExtResource( 4 )]
 
@@ -501,6 +501,9 @@ position = Vector2( 295.782, 55.6083 )
 
 [node name="Spikes" parent="." instance=ExtResource( 9 )]
 position = Vector2( 103.624, 167.981 )
+
+[node name="Spikes6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 103.999, 40.2504 )
 
 [node name="Spikes2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 119.356, 167.607 )
