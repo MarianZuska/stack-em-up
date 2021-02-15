@@ -194,7 +194,7 @@ func gravity(delta):
 	 or (is_near_right_wall() and Input.is_action_pressed("right"))):
 		motion.y = min(motion.y, WALL_SLIDE_SPEED)
 
-func friction(delta):
+func friction(delta): 
 	if not dashing:
 		if is_on_floor():
 			if xinput == 0:
@@ -202,6 +202,11 @@ func friction(delta):
 		else:
 			if xinput == 0:
 				motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
+
+func throw():
+	motion = Vector2(JUMP_FORCE, -JUMP_FORCE)
+	if sprite.flip_h:
+		motion.x = -motion.x
 
 func is_near_wall():
 	return is_near_left_wall() or is_near_right_wall()

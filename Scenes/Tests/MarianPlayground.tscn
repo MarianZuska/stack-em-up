@@ -500,4 +500,4 @@ position = Vector2( 201.25, 151.75 )
 [node name="Door" parent="." instance=ExtResource( 8 )]
 position = Vector2( 66.6238, 120 )
 buttons = [ NodePath("../Button") ]
-buttonsNeeded = 1
+color = Color( 0.254902, 0.533333, 0.254902, 1 )

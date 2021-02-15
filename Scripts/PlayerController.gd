@@ -14,7 +14,7 @@ func _ready() -> void:
 func activate_player():
 	var players = get_players()
 	for index in range(len(players)):
-		players[index].set("is_controlled", index == currently_active_index)
+		players[index].is_controlled = index == currently_active_index
 		
 func get_player_tree(reference_player):
 	if reference_player == null:
@@ -31,7 +31,7 @@ func stack_on_player(curr_player):
 				var other_player_tree = get_player_tree(other_player)
 				var curr_player_tree = get_player_tree(curr_player)
 				if not(curr_player in other_player_tree) and not(other_player in curr_player_tree):
-					other_player.set("can_move", false)
+					other_player.can_move = false
 					get_collision_shape(other_player).disabled = true
 					curr_player_tree[-1].player_on_top = other_player
 					resize_collision_shape(other_player)
@@ -43,7 +43,7 @@ func unstack_for_player(curr_player):
 	if player != null:
 		# If unstack all players
 		# unstack_for_player(curr_player.player_on_top)
-		player.set("can_move", true)
+		player.can_move = true
 		get_collision_shape(player).disabled = false
 		curr_player.player_on_top = null
 		resize_collision_shape(player)
@@ -77,6 +77,13 @@ func find_which_player_is_stacked_below(player_stacked_above):
 				return player
 	return null
 
+func throw_player_on_top():
+	if get_current_player().player_on_top != null:
+		var thrown_player = get_current_player().player_on_top
+		unstack_for_player(get_current_player())
+		thrown_player.can_move = true
+		thrown_player.throw()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("swap_character"):
@@ -93,3 +100,6 @@ func _process(delta: float) -> void:
 			if p != null:
 				unstack_for_player(p)
 				break
+				
+	if Input.is_action_just_pressed("throw"):
+		throw_player_on_top()
