@@ -78,11 +78,12 @@ func find_which_player_is_stacked_below(player_stacked_above):
 	return null
 
 func throw_player_on_top():
-	if get_current_player().player_on_top != null:
-		var thrown_player = get_current_player().player_on_top
-		unstack_for_player(get_current_player())
+	var current_player = get_current_player()
+	if current_player.player_on_top != null:
+		var thrown_player = current_player.player_on_top
+		unstack_for_player(current_player)
 		thrown_player.can_move = true
-		thrown_player.throw()
+		thrown_player.throw(current_player.motion)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -9,7 +9,7 @@ const WALL_SLIDE_SPEED = 50
 const DASH_SPEED = 175
 const DASH_DURATION = 0.2
 
-const JUMP_FORCE = 190
+const JUMP_FORCE = 200
 const WALL_JUMP_FORCE = 140
 const MAX_FALL_SPEED = 400
 const GRAVITY = 6
@@ -75,6 +75,7 @@ func _physics_process(delta):
 		particles()
 	
 		close_down()
+		
 		motion = move_and_slide(motion, Vector2.UP)
 	if player_on_top != null:
 		var pos = get_global_position() + Vector2(0, -16)
@@ -203,11 +204,14 @@ func friction(delta):
 			if xinput == 0:
 				motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
 
-func throw():
-	motion = Vector2(JUMP_FORCE, -JUMP_FORCE)
-	if sprite.flip_h:
-		motion.x = -motion.x
-
+func throw(force):
+	motion = Vector2(0,-JUMP_FORCE) + force
+	motion.y = max(motion.y, -JUMP_FORCE)
+	if force.x < 0:
+		motion.x -= JUMP_FORCE
+	else:
+		motion.x += JUMP_FORCE
+	
 func is_near_wall():
 	return is_near_left_wall() or is_near_right_wall()
 
