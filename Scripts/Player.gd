@@ -18,13 +18,13 @@ const LOW_JUMP_MULTIPLIER = 3.5
 
 const GROUND_HANG_TIME = 0
 const WALL_HANG_TIME = 0.2
-const JUMP_BUFFER_TIME = 0.1
+const JUMP_BUFFER_TIME = 0.25
 
 const CAM_LOOK_AHEAD_SPEED = 6
 const CAM_LOOK_AHEAD_AMOUNT = 50
 
-const NO_MOVE_LEFT_TIME = 0.1
-const NO_MOVE_RIGHT_TIME = 0.1
+const NO_MOVE_LEFT_TIME = 0.25
+const NO_MOVE_RIGHT_TIME = 0.25
 
 var hangCounter = 0
 var jumpBufferCounter = 0
