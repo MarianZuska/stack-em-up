@@ -19,10 +19,10 @@ func setCurrentSelection(index):
 
 func handleSelection(_currentSelection):
 	if currentSelection == 0:
-		SceneChanger.change_scene("res://MarianPlayground.tscn", 0)
+		SceneChanger.change_scene("res://Scenes/Tests/MarianPlayground.tscn", 0)
 	elif currentSelection == 1:
 		print("Clicked options!")
-		SceneChanger.change_scene("res://MainMenu.tscn", 0)
+		SceneChanger.change_scene("res://Scenes/Levels/MainMenu.tscn", 0)
 	elif currentSelection == 2:
 		get_tree().quit()
 		

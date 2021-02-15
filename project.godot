@@ -16,13 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="brackeys-game-jam-2021"
-run/main_scene="res://BrutenisTestRoom.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/Tests/BrutenisTestRoom.tscn"
+config/icon="res://Resources/icon.png"
 
 [autoload]
 
-SceneChanger="*res://SceneChanger.tscn"
-Utils="*res://Utils.gd"
+SceneChanger="*res://Scenes/Controllers/SceneChanger.tscn"
+Utils="*res://Scripts/Utils.gd"
 
 [display]
 
@@ -114,4 +114,4 @@ unmerge_characters={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Resources/Fonts/default_env.tres"
