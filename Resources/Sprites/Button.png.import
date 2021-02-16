@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DungeonTiles.png-9f5a6ad9ec44d1eaebb20d824a852a90.stex"
+path="res://.import/Button.png-03e9cbe101071950a52979e0ad5c088c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/DungeonTiles.png"
-dest_files=[ "res://.import/DungeonTiles.png-9f5a6ad9ec44d1eaebb20d824a852a90.stex" ]
+source_file="res://Resources/Sprites/Button.png"
+dest_files=[ "res://.import/Button.png-03e9cbe101071950a52979e0ad5c088c.stex" ]
 
 [params]
 

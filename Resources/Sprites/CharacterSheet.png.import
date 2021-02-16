@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DungeonTiles.png-9f5a6ad9ec44d1eaebb20d824a852a90.stex"
+path="res://.import/CharacterSheet.png-dffecaff2347c0458586554a75b88cf3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/DungeonTiles.png"
-dest_files=[ "res://.import/DungeonTiles.png-9f5a6ad9ec44d1eaebb20d824a852a90.stex" ]
+source_file="res://Resources/Sprites/CharacterSheet.png"
+dest_files=[ "res://.import/CharacterSheet.png-dffecaff2347c0458586554a75b88cf3.stex" ]
 
 [params]
 

@@ -206,7 +206,7 @@ func friction(delta):
 
 func throw(force):
 	motion = Vector2(0,-JUMP_FORCE) + force
-	motion.y = max(motion.y, -JUMP_FORCE)
+	motion.y = max(motion.y, -JUMP_FORCE*0.9)
 	if force.x < 0:
 		motion.x -= JUMP_FORCE
 	else:
