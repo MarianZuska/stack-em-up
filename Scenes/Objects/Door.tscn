@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.48598, 8.06168 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Close"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -21,8 +21,7 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Open"
+[sub_resource type="Animation" id=3]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -50,5 +49,5 @@ hframes = 11
 frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Close = SubResource( 3 )
-anims/Open = SubResource( 2 )
+anims/Close = SubResource( 2 )
+anims/Open = SubResource( 3 )

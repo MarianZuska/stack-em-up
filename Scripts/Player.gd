@@ -130,7 +130,10 @@ func animate():
 		animationPlayer.play("Jump")
 	elif xinput != 0:
 		animationPlayer.play("Run")
-	else:
+	elif not was_on_floor and is_on_floor():
+		animationPlayer.play("Land")
+		animationPlayer.queue("Stand")
+	elif not animationPlayer.current_animation == "Land":
 		animationPlayer.play("Stand")
 		
 func jump(delta):

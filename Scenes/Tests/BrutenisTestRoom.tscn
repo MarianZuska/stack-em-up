@@ -36,4 +36,4 @@ player_color = Color( 1, 0.984314, 0, 1 )
 [node name="SceneChanger" parent="." instance=ExtResource( 4 )]
 
 [node name="Spikes" parent="." instance=ExtResource( 5 )]
-position = Vector2( 272, 128 )
+position = Vector2( 280, 120 )
