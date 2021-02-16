@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Resources/Sprites/CharacterSheet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -72,6 +72,23 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 7, 0 ]
 }
 
+[sub_resource type="Animation" id=7]
+resource_name = "RunLow"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 14, 15, 16, 17, 18, 19, 20, 0 ]
+}
+
 [sub_resource type="Animation" id=5]
 length = 0.1
 tracks/0/type = "value"
@@ -86,6 +103,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0 ]
 }
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4.23285, 1.2792 )
 
 [node name="PlayerRoot" type="Node2D"]
 script = ExtResource( 3 )
@@ -123,13 +143,21 @@ cast_to = Vector2( 0, -3 )
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 1 )
 hframes = 21
-frame = 9
+frame = 1
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="Player"]
 anims/Dash = SubResource( 2 )
 anims/Jump = SubResource( 3 )
 anims/Land = SubResource( 6 )
 anims/Run = SubResource( 4 )
+anims/RunLow = SubResource( 7 )
 anims/Stand = SubResource( 5 )
+
+[node name="HeadTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HeadTrigger"]
+position = Vector2( 0, -8.08582 )
+shape = SubResource( 8 )
+one_way_collision_margin = 0.0
 
 [node name="Anchor" type="Node2D" parent="."]
