@@ -26,6 +26,8 @@ const CAM_LOOK_AHEAD_AMOUNT = 50
 const NO_MOVE_LEFT_TIME = 0.25
 const NO_MOVE_RIGHT_TIME = 0.25
 
+const PUSH_FACTOR = 10
+
 var hangCounter = 0
 var jumpBufferCounter = 0
 
@@ -43,13 +45,16 @@ var jumpingNow = false
 var player_on_top = null
 var was_on_floor = true
 
+var can_move = true
+var is_controlled = true
+
 onready var sprite = get_node("Sprite")
 onready var animationPlayer = get_node("AnimPlayer")
 onready var anchor = get_node("../Anchor")
 onready var parent = get_owner()
 
-var can_move = true
-var is_controlled = true
+
+
 
 func _physics_process(delta):
 	
@@ -76,11 +81,20 @@ func _physics_process(delta):
 	
 		close_down()
 		
-		motion = move_and_slide(motion, Vector2.UP)
+		motion = move_and_slide(motion, Vector2.UP, false, 4, PI/4, false)
+		
+		for index in get_slide_count():
+			var collision = get_slide_collision(index)
+			if collision.collider.is_in_group("movable"):
+				# collision.collider.apply_central_impulse(-collision.normal * velocity.length() * 0.5)
+				collision.collider.apply_central_impulse(-collision.normal * PUSH_FACTOR)
 	if player_on_top != null:
 		var pos = get_global_position() + Vector2(0, -16)
 		player_on_top.set_global_position(pos)
 		player_on_top.sprite.flip_h = sprite.flip_h
+	
+
+
 
 
 func close_down():
