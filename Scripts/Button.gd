@@ -8,3 +8,8 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == "Player":
 			is_pressed = true
+			
+	if is_pressed == false:
+		$Sprite.frame = 0
+	else: 
+		$Sprite.frame = 1

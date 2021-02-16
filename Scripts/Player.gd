@@ -130,7 +130,10 @@ func animate():
 		animationPlayer.play("Jump")
 	elif xinput != 0:
 		animationPlayer.play("Run")
-	else:
+	elif not was_on_floor and is_on_floor():
+		animationPlayer.play("Land")
+		animationPlayer.queue("Stand")
+	elif not animationPlayer.current_animation == "Land":
 		animationPlayer.play("Stand")
 		
 func jump(delta):
@@ -206,7 +209,7 @@ func friction(delta):
 
 func throw(force):
 	motion = Vector2(0,-JUMP_FORCE) + force
-	motion.y = max(motion.y, -JUMP_FORCE)
+	motion.y = max(motion.y, -JUMP_FORCE*0.9)
 	if force.x < 0:
 		motion.x -= JUMP_FORCE
 	else:

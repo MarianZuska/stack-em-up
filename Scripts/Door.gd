@@ -7,6 +7,8 @@ export(bool) var do_invert = false
 onready var collision_shape = $CollisionShape2D
 onready var sprite = $Sprite
 onready var initial_modulate = modulate
+onready var animation_player = $AnimationPlayer
+var wasOpen = false
 
 func _ready():
 	for button in buttons:
@@ -27,7 +29,11 @@ func _process(delta):
 	
 	if open:
 		collision_shape.disabled = true
-		sprite.modulate = Color.transparent
 	else:
 		collision_shape.disabled = false
-		sprite.modulate = initial_modulate
+		
+	if wasOpen and not open:
+		animation_player.play("Close")
+	elif not wasOpen and open:
+		animation_player.play("Open")
+	wasOpen = open

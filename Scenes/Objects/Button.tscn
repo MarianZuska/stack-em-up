@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Sprites/Tile16x16_0.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Sprites/Button.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.02634, 0.0596466 )
@@ -14,3 +14,4 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+hframes = 2
