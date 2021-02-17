@@ -1,0 +1,24 @@
+[gd_scene format=2]
+
+[node name="Blood" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 100
+lifetime = 2.35
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+flag_align_y = true
+direction = Vector2( 0, -1 )
+spread = 60.0
+initial_velocity = 70.0
+initial_velocity_random = 1.0
+angular_velocity = 0.21
+angular_velocity_random = 0.4
+linear_accel_random = 1.0
+scale_amount = 2.0
+scale_amount_random = 0.5
+color = Color( 1, 0, 0, 1 )
+hue_variation = 0.95
+hue_variation_random = 0.04

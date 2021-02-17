@@ -3,6 +3,7 @@ extends Node2D
 export(Array, NodePath) var player_root_nodes = []
 var currently_active_index = 0
 
+# TODO: Fix this
 const PLAYER_COLLISION_SIZE_Y = -7.341
 const PLAYER_COLLISION_OFFSET_Y = 2.637
 
@@ -15,6 +16,7 @@ func activate_player():
 	var players = get_players()
 	for index in range(len(players)):
 		players[index].is_controlled = index == currently_active_index
+	handle_movable_objects()
 		
 func get_player_tree(reference_player):
 	if reference_player == null:
@@ -23,6 +25,12 @@ func get_player_tree(reference_player):
 	
 func dist(p1, p2):
 	return abs(p1.get_global_position().distance_to(p2.get_global_position()))
+	
+# Sets alls objectsin the group "movable" to static body if current guys are stacked
+func handle_movable_objects():
+	var curr_height = len(get_player_tree(get_current_player()))
+	for obj in get_tree().get_nodes_in_group("movable"):
+		obj.mode = 1 if obj.movable_by_players > curr_height else 2
 	
 func stack_on_player(curr_player):
 	for other_player in get_players():
@@ -37,6 +45,7 @@ func stack_on_player(curr_player):
 					resize_collision_shape(other_player)
 					break
 	resize_collision_shape(curr_player)
+	handle_movable_objects()
 
 func unstack_for_player(curr_player):
 	var player = curr_player.player_on_top
@@ -48,6 +57,7 @@ func unstack_for_player(curr_player):
 		curr_player.player_on_top = null
 		resize_collision_shape(player)
 		resize_collision_shape(curr_player)
+	handle_movable_objects()
 		
 func get_collision_shape(for_player):
 	return for_player.get_child(1)

@@ -1161,32 +1161,32 @@ next_level = "res://Scenes/Levels/Level3.tscn"
 [node name="Spikes" parent="TileMap" instance=ExtResource( 6 )]
 position = Vector2( 136, 136 )
 
+[node name="Spikes4" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 184, 136 )
+
+[node name="Spikes6" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 216, 136 )
+
+[node name="Spikes7" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 232, 136 )
+
+[node name="Spikes8" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 248, 136 )
+
+[node name="Spikes5" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 200, 136 )
+
+[node name="Spikes9" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 264, 136 )
+
+[node name="Spikes10" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 280, 136 )
+
+[node name="Spikes3" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 168, 136 )
+
 [node name="Spikes2" parent="TileMap" instance=ExtResource( 6 )]
 position = Vector2( 152, 136 )
-
-[node name="Spikes" parent="TileMap/Spikes2" instance=ExtResource( 6 )]
-position = Vector2( 16, 0 )
-
-[node name="Spikes" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 16, 0 )
-
-[node name="Spikes2" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 32, 0 )
-
-[node name="Spikes3" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 48, 0 )
-
-[node name="Spikes4" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 64, 0 )
-
-[node name="Spikes5" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 80, 0 )
-
-[node name="Spikes6" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 96, 0 )
-
-[node name="Spikes7" parent="TileMap/Spikes2/Spikes" instance=ExtResource( 6 )]
-position = Vector2( 112, 0 )
 
 [node name="PlayerRoot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 64, 88 )

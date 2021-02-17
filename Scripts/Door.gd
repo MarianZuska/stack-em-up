@@ -8,7 +8,7 @@ onready var collision_shape = $CollisionShape2D
 onready var sprite = $Sprite
 onready var initial_modulate = modulate
 onready var animation_player = $AnimationPlayer
-var wasOpen = false
+onready var wasOpen = !do_invert
 
 func _ready():
 	for button in buttons:

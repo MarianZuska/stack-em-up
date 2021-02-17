@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/ChangeSceneOnEnter.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Particles/Blood.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Sprites/SpikesAnimated.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -68,6 +69,7 @@ animations = [ {
 
 [node name="Spikes" type="Area2D"]
 script = ExtResource( 1 )
+play_particles = ExtResource( 2 )
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2( -0.42572, 5.95669 )
@@ -75,5 +77,4 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 15 )
-frame = 1
 playing = true

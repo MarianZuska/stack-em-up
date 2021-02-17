@@ -143,6 +143,7 @@ cast_to = Vector2( 0, -3 )
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 1 )
 hframes = 21
+frame = 7
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="Player"]
 anims/Dash = SubResource( 2 )
