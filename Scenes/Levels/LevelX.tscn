@@ -1,15 +1,20 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Resources/Other/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Objects/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Sprites/Signs/ThrowSign.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Objects/Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Objects/Spikes.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Objects/Exit.tscn" type="PackedScene" id=10]
 
 [node name="World" type="Node2D"]
+
+[node name="ThrowSign" type="Sprite" parent="."]
+position = Vector2( 281.401, 92.8804 )
+texture = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

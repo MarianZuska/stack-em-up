@@ -2,7 +2,7 @@ extends Area2D
 
 var has_triggered = false
 
-export(NodePath) var next_level = null
+export(String, FILE) var next_level = null
 
 func _physics_process(delta):
 	if not has_triggered:
@@ -12,4 +12,4 @@ func _physics_process(delta):
 				has_triggered = true
 				if next_level == null:
 					next_level = get_tree().current_scene.filename
-				SceneChanger.change_scene(next_level, 0)
+				SceneChanger.change_scene(next_level)
