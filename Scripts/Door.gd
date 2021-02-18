@@ -20,17 +20,12 @@ func _process(delta):
 		if get_node(button).is_pressed == true:
 			count += 1
 	
-	var open = false
-	if count >= buttons_needed:
-		open = true
+	var open = count >= buttons_needed
 		
 	if do_invert:
 		open = not open
 	
-	if open:
-		collision_shape.disabled = true
-	else:
-		collision_shape.disabled = false
+	collision_shape.disabled = open
 		
 	if wasOpen and not open:
 		animation_player.play("Close")

@@ -55,6 +55,7 @@ buttons = [ NodePath("../Button3"), NodePath("../Button2") ]
 [node name="Exit" parent="." instance=ExtResource( 3 )]
 position = Vector2( 360.172, 59.5336 )
 rotation = -1.5708
+next_level = "res://Scenes/Levels/Level9.tscn"
 
 [node name="Spikes" parent="." instance=ExtResource( 4 )]
 position = Vector2( 103.939, 168.06 )

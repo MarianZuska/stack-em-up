@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/On My Way.wav-a643fd4cb2be272611a2b5ad5474f170.sample"
+
+[deps]
+
+source_file="res://Resources/Sound/Music/On My Way.wav"
+dest_files=[ "res://.import/On My Way.wav-a643fd4cb2be272611a2b5ad5474f170.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

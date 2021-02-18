@@ -15,9 +15,17 @@ func _physics_process(delta):
 				has_triggered = true
 				if next_level == null: 
 					next_level = get_tree().current_scene.filename
-				if play_particles != null:
+				var play_death_sound = false
+				if is_death and body.is_controlled:
+					body.is_controlled = false
+					play_death_sound = true
+
+				if play_particles != null and (play_death_sound or is_win):
 					var particles = play_particles.instance()
-					# particles.set_name("Particles")
-					add_child(particles)
+					particles.set_name("Particles")
+					particles.position = position 
+					get_tree().get_current_scene().add_child(particles)
 					particles.get_child(0).restart()
-				SceneChanger.change_scene(next_level, 0.5, is_win, is_death)
+
+				SceneChanger.change_scene(next_level, 0.5, is_win, play_death_sound)
+				

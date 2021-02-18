@@ -1,4 +1,7 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.524752, 0.518182 ), -2.60645, -2.60645, 0, 0, Vector2( 1, 0 ), -0.163961, 0.0, 0, 0 ]
 
 [node name="Blood" type="Node2D"]
 
@@ -19,6 +22,7 @@ angular_velocity_random = 0.4
 linear_accel_random = 1.0
 scale_amount = 2.0
 scale_amount_random = 0.5
+scale_amount_curve = SubResource( 1 )
 color = Color( 1, 0, 0, 1 )
 hue_variation = 0.95
 hue_variation_random = 0.04

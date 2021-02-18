@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/8-Bit_Dungeon.wav-7283f0de259dc51dd58921cd1dc8c8fd.sample"
+
+[deps]
+
+source_file="res://Resources/Sound/Music/8-Bit_Dungeon.wav"
+dest_files=[ "res://.import/8-Bit_Dungeon.wav-7283f0de259dc51dd58921cd1dc8c8fd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
