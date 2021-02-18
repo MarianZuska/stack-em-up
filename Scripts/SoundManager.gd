@@ -1,6 +1,6 @@
 extends Node2D
 
-func play(file_path, pos=null, volume=-30, loop=false):
+func play(file_path, pos=null, volume=-30):
 	var player = AudioStreamPlayer2D.new()
 	
 	if pos == null:
@@ -12,7 +12,6 @@ func play(file_path, pos=null, volume=-30, loop=false):
 	player.stream = load(file_path)
 	player.volume_db = volume
 	player.play()
-	player.autoplay = loop
 
 func _ready():
-	play("res://Resources/Sound/On My Way.wav", null, -20, true)
+	play("res://Resources/Sound/On My Way.wav", null, -20)
