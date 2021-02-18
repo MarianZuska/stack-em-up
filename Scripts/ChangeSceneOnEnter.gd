@@ -4,6 +4,8 @@ var has_triggered = false
 
 export(String, FILE) var next_level = null
 export(PackedScene) var play_particles = null
+export(bool) var is_win = false
+export(bool) var is_death = false
 
 func _physics_process(delta):
 	if not has_triggered:
@@ -18,4 +20,4 @@ func _physics_process(delta):
 					# particles.set_name("Particles")
 					add_child(particles)
 					particles.get_child(0).restart()
-				SceneChanger.change_scene(next_level)
+				SceneChanger.change_scene(next_level, 0.5, is_win, is_death)

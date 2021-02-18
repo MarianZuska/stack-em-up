@@ -1169,6 +1169,7 @@ texture = ExtResource( 9 )
 
 [node name="PlayerRoot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 104, 88 )
+player_color = Color( 0.933333, 0.878431, 0.0705882, 1 )
 
 [node name="SceneChanger" parent="." instance=ExtResource( 7 )]
 

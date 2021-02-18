@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Land2.wav-d7d3edc074e7240ae2512cf36d646e5e.sample"
+
+[deps]
+
+source_file="res://Resources/Sound/SFX/Land2.wav"
+dest_files=[ "res://.import/Land2.wav-d7d3edc074e7240ae2512cf36d646e5e.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

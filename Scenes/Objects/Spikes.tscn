@@ -70,6 +70,7 @@ animations = [ {
 [node name="Spikes" type="Area2D"]
 script = ExtResource( 1 )
 play_particles = ExtResource( 2 )
+is_death = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2( -0.42572, 5.95669 )
@@ -77,4 +78,5 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 15 )
+frame = 1
 playing = true

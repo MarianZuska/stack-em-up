@@ -28,6 +28,9 @@ const NO_MOVE_RIGHT_TIME = 0.25
 
 const PUSH_FACTOR = 10
 
+const JUMP_SFX = "res://Resources/Sound/SFX/Jump3.wav"
+const LAND_SFX = "res://Resources/Sound/SFX/Land.wav"
+
 var hangCounter = 0
 var jumpBufferCounter = 0
 
@@ -52,14 +55,18 @@ onready var sprite = get_node("Sprite")
 onready var animationPlayer = get_node("AnimPlayer")
 onready var anchor = get_node("../Anchor")
 onready var parent = get_owner()
+onready var particleAnchor = get_node("ParticleAnchor")
 
+onready var fx_land = preload("res://Scenes/Particles/LandParticle.tscn")
+onready var fx_jump = preload("res://Scenes/Particles/JumpDustParticle.tscn")
+onready var fx_foot = get_node("ParticleAnchor/FootDustParticle")
 
-
-
+	
 func _physics_process(delta):
 	
 	if is_controlled:
 		sprite.modulate = parent.player_color
+		
 	else:	
 		var c = parent.player_color / 3 
 		c[3] = 1
@@ -79,6 +86,8 @@ func _physics_process(delta):
 		animate()
 		particles()
 	
+		sound()
+		
 		close_down()
 		
 		motion = move_and_slide(motion, Vector2.UP, false, 4, PI/4, false)
@@ -94,24 +103,55 @@ func _physics_process(delta):
 		player_on_top.sprite.flip_h = sprite.flip_h
 	
 
-
-
+func sound():
+	if Utils.get_time() >= 0.5:
+		if not was_on_floor and is_on_floor():
+			SoundManager.play(LAND_SFX, position, 0)
+		if jumpingNow:
+			SoundManager.play(JUMP_SFX, position, -20)
+		
 
 func close_down():
 	was_on_floor = is_on_floor()
 
 func particles():
+	
+	var c = parent.player_color / 3.5
+	c[3] = 1
+		
 	var land = false
 	var jump = false
 	var run = false
 	if not was_on_floor and is_on_floor():
 		land = true
+		
 	if jumpingNow:
 		jump = true
 	if xinput != 0 and is_on_floor():
 		run = true
+		
+	if land:
+		var land_instance = fx_land.instance()
+		land_instance.modulate = c
+		get_tree().get_root().get_child(0).add_child(land_instance)
+		land_instance.set_emitting(true)
+		land_instance.global_position = particleAnchor.global_position
 	
-
+	"""
+	if jump:
+		var jump_instance = fx_jump.instance()
+		jump_instance.modulate = c
+		get_tree().get_root().get_child(0).add_child(jump_instance)
+		jump_instance.set_emitting(true)
+		jump_instance.global_position = particleAnchor.global_position
+	"""
+	
+	if run:
+		fx_foot.modulate = c
+		fx_foot.set_emitting(true)
+	else:
+		fx_foot.set_emitting(false)
+	
 
 func move_anchor(delta):
 	anchor.global_position = lerp(anchor.global_position, 
@@ -155,8 +195,6 @@ func jump(delta):
 	
 	if is_on_floor():
 		hangCounter = GROUND_HANG_TIME
-	elif is_near_wall():
-		hangCounter = WALL_HANG_TIME
 	else:
 		hangCounter -= delta
 	
@@ -170,16 +208,9 @@ func jump(delta):
 		
 		if is_on_floor():
 			motion.y = -JUMP_FORCE
-		else:
-			motion.y = -WALL_JUMP_FORCE
 		jumpBufferCounter = 0
 		hangCounter = 0
-		if not is_on_floor() and is_near_left_wall():
-			motion.x = MAX_SPEED
-			noMoveRightCounter = NO_MOVE_RIGHT_TIME
-		elif not is_on_floor() and is_near_right_wall():
-			motion.x = -MAX_SPEED
-			noMoveLeftCounter = NO_MOVE_LEFT_TIME
+		
 
 func run(delta):
 	if not dashing:

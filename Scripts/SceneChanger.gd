@@ -5,7 +5,12 @@ signal scene_changed()
 onready var animation_player = get_node("AnimationPlayer")
 onready var black = get_node("Control/BlackRect")
 
-func change_scene(path, delay = 0.5):
+func change_scene(path, delay = 0.5, play_win = false, play_death = false):
+	if play_win:
+		SoundManager.play("res://Resources/Sound/SFX/Pickup.wav", null, -10)
+	elif play_death:
+		SoundManager.play("res://Resources/Sound/SFX/Hurt.wav", null, -10)
+	
 	yield(get_tree().create_timer(delay), "timeout")
 	animation_player.play("Fade")
 	yield(animation_player, "animation_finished")

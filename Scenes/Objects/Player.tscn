@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Resources/Sprites/CharacterSheet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/PlayerRoot.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Particles/FootDustParticle.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.04875, 7.07948 )
@@ -152,6 +153,12 @@ anims/Land = SubResource( 4 )
 anims/Run = SubResource( 5 )
 anims/RunLow = SubResource( 6 )
 anims/Stand = SubResource( 7 )
+
+[node name="ParticleAnchor" type="Node2D" parent="Player"]
+position = Vector2( 0, 5.596 )
+
+[node name="FootDustParticle" parent="Player/ParticleAnchor" instance=ExtResource( 4 )]
+emitting = false
 
 [node name="HeadTrigger" type="Area2D" parent="."]
 

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Weird.wav-7b86413a46286770cfcddf298debd19e.sample"
+
+[deps]
+
+source_file="res://Resources/Sound/SFX/Weird.wav"
+dest_files=[ "res://.import/Weird.wav-7b86413a46286770cfcddf298debd19e.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
