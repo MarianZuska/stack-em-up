@@ -21,6 +21,6 @@ func change_scene(path, delay = 0.5, play_win = false, play_death = false):
 
 func _process(delta):
 	if Input.is_action_pressed("reset"):
-		change_scene(get_tree().current_scene.filename)
+		change_scene(get_tree().current_scene.filename, 0)
 	if Input.is_action_pressed("ui_cancel"):
-		change_scene("res://Scenes/Levels/MainMenu.tscn")
+		change_scene("res://Scenes/Levels/MainMenu.tscn", 0.2)

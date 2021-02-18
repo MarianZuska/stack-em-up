@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Objects/Button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Sprites/Signs/SwitchSign.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1209,3 +1210,7 @@ position = Vector2( 168, 136 )
 player_root_nodes = [ NodePath("../PlayerRoot"), NodePath("../PlayerRoot2") ]
 
 [node name="SceneChanger" parent="." instance=ExtResource( 8 )]
+
+[node name="SwitchSign" type="Sprite" parent="."]
+position = Vector2( 112, 64 )
+texture = ExtResource( 11 )
