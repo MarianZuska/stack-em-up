@@ -10,15 +10,15 @@ onready var initial_modulate = modulate
 onready var animation_player = $AnimationPlayer
 
 onready var active = true
-onready var wasActive = active
+onready var wasActive = false
 onready var nextSwitch = time
 
 func _ready():
 	if do_invert:
-		nextSwitch = 0
-
+		wasActive = true
+		active = false
+	
 func _process(delta):
-	var count = 0
 	
 	if Utils.get_time() >= nextSwitch:
 		nextSwitch += time
