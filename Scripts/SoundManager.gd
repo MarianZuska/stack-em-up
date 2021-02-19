@@ -14,4 +14,4 @@ func play(file_path, pos=null, volume=-30):
 	audio_player.play()
 
 func _ready():
-	play("res://Resources/Sound/Music/8-Bit_Dungeon.wav", null, -20)
+	play("res://Resources/Sound/Music/On My Way.wav", null, -20)

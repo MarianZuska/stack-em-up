@@ -44,7 +44,7 @@ var canDash = false
 var dashDir = Vector2.ZERO
 var dashing = false
 
-var jumpingNow = false
+var jumping_now = false
 var player_on_top = null
 var was_on_floor = true
 
@@ -63,6 +63,7 @@ onready var fx_foot = get_node("ParticleAnchor/FootDustParticle")
 
 	
 func _physics_process(delta):
+	jumping_now = false
 	
 	if is_controlled:
 		sprite.modulate = parent.player_color
@@ -107,7 +108,7 @@ func sound():
 	if Utils.get_time() >= 0.5:
 		if not was_on_floor and is_on_floor():
 			SoundManager.play(LAND_SFX, position, 0)
-		if jumpingNow:
+		if jumping_now:
 			SoundManager.play(JUMP_SFX, position, -20)
 		
 
@@ -125,7 +126,7 @@ func particles():
 	if not was_on_floor and is_on_floor():
 		land = true
 		
-	if jumpingNow:
+	if jumping_now:
 		jump = true
 	if xinput != 0 and is_on_floor():
 		run = true
@@ -191,7 +192,7 @@ func animate():
 		animationPlayer.play("Stand")
 		
 func jump(delta):
-	jumpingNow = false
+	jumping_now = false
 	
 	if is_on_floor():
 		hangCounter = GROUND_HANG_TIME
@@ -204,7 +205,7 @@ func jump(delta):
 		jumpBufferCounter -= delta
 	
 	if jumpBufferCounter >= 0 and hangCounter >= 0:
-		jumpingNow = true
+		jumping_now = true
 		
 		if is_on_floor():
 			motion.y = -JUMP_FORCE
