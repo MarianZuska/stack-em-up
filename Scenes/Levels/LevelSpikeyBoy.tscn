@@ -65,6 +65,7 @@ rotation = 1.57079
 
 [node name="Exit" parent="." instance=ExtResource( 1 )]
 position = Vector2( 40, 200 )
+next_level = "res://Scenes/Levels/EndingScreen.tscn"
 
 [node name="Door" parent="." instance=ExtResource( 8 )]
 modulate = Color( 1, 0, 0, 1 )

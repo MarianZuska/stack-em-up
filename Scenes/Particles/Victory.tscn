@@ -3,7 +3,7 @@
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[node name="Blood" type="Node2D"]
+[node name="Victory" type="Node2D"]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 100
