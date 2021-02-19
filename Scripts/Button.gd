@@ -15,7 +15,6 @@ func _physics_process(delta):
 	if is_pressed:
 		if not was_pressed:
 			SoundManager.play("res://Resources/Sound/SFX/Land3.wav", -15)
-		print($Sprite.frame)
 		if $Sprite.frame == 0 and particles_on_press != null:
 			var particles = particles_on_press.instance()
 			particles.modulate = modulate

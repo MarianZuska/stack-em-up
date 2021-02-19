@@ -4,7 +4,7 @@
 [ext_resource path="res://Resources/Sprites/Lever.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.7815, 5.35963 )
+extents = Vector2( 10.8125, 7.17359 )
 
 [node name="Lever" type="Area2D"]
 script = ExtResource( 1 )
@@ -14,5 +14,5 @@ texture = ExtResource( 2 )
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2.50881 )
+position = Vector2( 0.21022, 0.932131 )
 shape = SubResource( 1 )

@@ -1,18 +1,14 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=147 format=2]
 
-[ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=1]
-[ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Objects/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Objects/TileMap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Objects/Exit.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Objects/Button.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Objects/Box (2x2).tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Objects/Spikes.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Resources/Sprites/Signs/UnstackSign.png" type="Texture" id=12]
-[ext_resource path="res://Resources/Sprites/Signs/StackSign.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Objects/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Objects/ActivatableBlock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Objects/Button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Objects/TileMap.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -425,7 +421,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [sub_resource type="TileSet" id=137]
 resource_local_to_scene = true
 0/name = "Tileset.png 0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 176, 81 )
@@ -731,7 +727,7 @@ resource_local_to_scene = true
 } ]
 0/z_index = 0
 1/name = "DungeonTiles.png 1"
-1/texture = ExtResource( 1 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 177, 96 )
@@ -1277,7 +1273,7 @@ resource_local_to_scene = true
 } ]
 1/z_index = 0
 2/name = "DungeonTiles.png 2"
-2/texture = ExtResource( 1 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 62, 78, 0, 1 )
@@ -1291,7 +1287,7 @@ resource_local_to_scene = true
 2/shapes = [  ]
 2/z_index = 0
 3/name = "DungeonTiles.png 3"
-3/texture = ExtResource( 1 )
+3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 47, 63, 18, 18 )
@@ -1312,7 +1308,7 @@ resource_local_to_scene = true
 } ]
 3/z_index = 0
 4/name = "DungeonTiles.png 4"
-4/texture = ExtResource( 1 )
+4/texture = ExtResource( 3 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 48, 64, 16, 16 )
@@ -1335,51 +1331,717 @@ resource_local_to_scene = true
 
 [node name="Node2D" type="Node2D"]
 
-[node name="PlayerController" parent="." instance=ExtResource( 10 )]
-position = Vector2( 64, 120 )
-player_root_nodes = [ NodePath("../Player1"), NodePath("../Player2") ]
+[node name="Button" parent="." instance=ExtResource( 8 )]
+position = Vector2( 24, 200 )
 
-[node name="SceneChanger" parent="." instance=ExtResource( 11 )]
+[node name="Button2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 48, 200 )
 
-[node name="StackSign" type="Sprite" parent="."]
-position = Vector2( 274.015, 173.165 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+[node name="Button3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 120, 200 )
 
-[node name="UnstackSign" type="Sprite" parent="."]
-position = Vector2( 351.055, 171.716 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+[node name="Button4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 72, 200 )
 
-[node name="TileMap" parent="." instance=ExtResource( 4 )]
-tile_set = SubResource( 137 )
-tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -65533, 1, 1, -65532, 1, 1, -65531, 1, 1, -65530, 1, 1, -65529, 1, 1, -65528, 1, 1, -65527, 1, 1, -65526, 1, 1, -65525, 1, 1, -65524, 1, 1, -65523, 1, 1, -65522, 1, 1, -65521, 1, 1, -65520, 1, 1, -65519, 1, 1, -65518, 1, 1, -65517, 1, 1, -65516, 1, 1, -65515, 1, 1, -65514, 1, 1, -65513, 1, 1, -65512, 1, 1, -65511, 1, 2, 65535, 1, 65536, 0, 1, 65541, 1, 1, 131073, 2, 1, 131073, 3, 1, 131073, 4, 1, 131073, 5, 1, 131073, 6, 1, 131073, 7, 1, 131073, 8, 1, 131073, 9, 1, 65542, 10, 1, 65537, 11, 1, 65537, 12, 1, 65537, 13, 1, 65537, 14, 1, 65537, 15, 1, 65541, 16, 1, 131073, 17, 1, 131073, 18, 1, 131073, 19, 1, 131073, 20, 1, 131073, 21, 1, 131073, 22, 1, 131073, 23, 1, 131073, 24, 1, 65542, 25, 1, 65538, 131071, 1, 65536, 65536, 1, 65538, 65545, 1, 65536, 65546, 1, 65537, 65547, 1, 65537, 65548, 1, 65537, 65549, 1, 65537, 65550, 1, 65537, 65551, 1, 65538, 65560, 1, 65536, 65561, 1, 65538, 196607, 1, 65536, 131072, 1, 65538, 131081, 1, 65536, 131082, 1, 65537, 131083, 1, 65537, 131084, 1, 65537, 131085, 1, 65537, 131086, 1, 65537, 131087, 1, 65538, 131096, 1, 65536, 131097, 1, 65538, 262143, 1, 65536, 196608, 1, 65538, 196613, 1, 0, 196614, 1, 1, 196615, 1, 1, 196616, 1, 1, 196617, 1, 131078, 196618, 1, 65537, 196619, 1, 65537, 196620, 1, 65537, 196621, 1, 65537, 196622, 1, 65537, 196623, 1, 65538, 196630, 1, 0, 196631, 1, 1, 196632, 1, 131078, 196633, 1, 65538, 327679, 1, 65536, 262144, 1, 65538, 262149, 1, 131072, 262150, 1, 131073, 262151, 1, 131073, 262152, 1, 131073, 262153, 1, 65542, 262154, 1, 65537, 262155, 1, 65537, 262156, 1, 65537, 262157, 1, 65537, 262158, 1, 65537, 262159, 1, 65538, 262165, 1, 0, 262166, 1, 131078, 262167, 1, 65537, 262168, 1, 65537, 262169, 1, 65538, 393215, 1, 65536, 327680, 1, 65538, 327689, 1, 131072, 327690, 1, 131073, 327691, 1, 131073, 327692, 1, 131073, 327693, 1, 65542, 327694, 1, 65537, 327695, 1, 65538, 327700, 1, 0, 327701, 1, 131078, 327702, 1, 65537, 327703, 1, 65537, 327704, 1, 65537, 327705, 1, 65538, 458751, 1, 65536, 393216, 1, 131077, 393217, 1, 1, 393218, 1, 1, 393219, 1, 2, 393229, 1, 131072, 393230, 1, 131073, 393231, 1, 131074, 393235, 1, 0, 393236, 1, 131078, 393237, 1, 65537, 393238, 1, 65537, 393239, 1, 65537, 393240, 1, 65537, 393241, 1, 65538, 524287, 1, 65536, 458752, 1, 65537, 458753, 1, 65537, 458754, 1, 65541, 458755, 1, 131074, 458770, 1, 0, 458771, 1, 131078, 458772, 1, 65537, 458773, 1, 65537, 458774, 1, 65537, 458775, 1, 65537, 458776, 1, 65537, 458777, 1, 65538, 589823, 1, 65536, 524288, 1, 65537, 524289, 1, 65537, 524290, 1, 65538, 524293, 1, 0, 524294, 1, 1, 524295, 1, 1, 524296, 1, 1, 524297, 1, 1, 524298, 1, 2, 524301, 1, 4, 524302, 1, 196609, 524303, 1, 196609, 524304, 1, 196609, 524305, 1, 196609, 524306, 1, 196614, 524307, 1, 131073, 524308, 1, 131073, 524309, 1, 131073, 524310, 1, 131073, 524311, 1, 131073, 524312, 1, 131073, 524313, 1, 131074, 655359, 1, 65536, 589824, 1, 65537, 589825, 1, 65541, 589826, 1, 131074, 589829, 1, 65536, 589830, 1, 65537, 589831, 1, 65537, 589832, 1, 65537, 589833, 1, 65537, 589834, 1, 65538, 589837, 1, 65539, 720895, 1, 65536, 655360, 1, 65537, 655361, 1, 65538, 655364, 1, 196608, 655365, 1, 196614, 655366, 1, 131073, 655367, 1, 131073, 655368, 1, 65542, 655369, 1, 65537, 655370, 1, 65538, 655373, 1, 65539, 786431, 1, 65536, 720896, 1, 65537, 720897, 1, 65538, 720904, 1, 65536, 720905, 1, 65537, 720906, 1, 65538, 720909, 1, 65539, 851967, 1, 65536, 786432, 1, 65537, 786433, 1, 131077, 786434, 1, 1, 786435, 1, 1, 786436, 1, 1, 786437, 1, 1, 786438, 1, 1, 786439, 1, 1, 786440, 1, 131078, 786441, 1, 65537, 786442, 1, 65538, 786445, 1, 65539, 917503, 1, 65536, 851968, 1, 65537, 851969, 1, 65537, 851970, 1, 65537, 851971, 1, 65537, 851972, 1, 65537, 851973, 1, 65537, 851974, 1, 65537, 851975, 1, 65537, 851976, 1, 65537, 851977, 1, 65537, 851978, 1, 131077, 851979, 1, 1, 851980, 1, 1, 851981, 1, 131079, 983039, 1, 131072, 917504, 1, 131073, 917505, 1, 131073, 917506, 1, 131073, 917507, 1, 131073, 917508, 1, 131073, 917509, 1, 131073, 917510, 1, 131073, 917511, 1, 131073, 917512, 1, 131073, 917513, 1, 131073, 917514, 1, 131073, 917515, 1, 131073, 917516, 1, 131073, 917517, 1, 131074 )
+[node name="Button5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 96, 200 )
 
-[node name="Spikes2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 312, 88 )
+[node name="Button6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 376, 200 )
 
-[node name="Spikes" parent="." instance=ExtResource( 9 )]
-position = Vector2( 343.999, 55.9989 )
+[node name="Button7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 352, 200 )
 
-[node name="Exit" parent="." instance=ExtResource( 5 )]
-position = Vector2( 375.999, 39.9989 )
-next_level = "res://Scenes/Levels/Level6.tscn"
+[node name="Button8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 280, 200 )
 
-[node name="Button" parent="." instance=ExtResource( 6 )]
-position = Vector2( 40, 184 )
-rotation = 1.57079
+[node name="Button11" parent="." instance=ExtResource( 8 )]
+position = Vector2( 176, 200 )
 
-[node name="Door" parent="." instance=ExtResource( 7 )]
-modulate = Color( 0.560784, 0.270588, 0.32549, 1 )
-position = Vector2( 104, 184 )
+[node name="Button12" parent="." instance=ExtResource( 8 )]
+position = Vector2( 200, 200 )
+
+[node name="Button13" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 200 )
+
+[node name="Button9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 328, 200 )
+
+[node name="Button10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 304, 200 )
+
+[node name="ActivatableBlock" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 168 )
 buttons = [ NodePath("../Button") ]
 
-[node name="Player1" parent="." instance=ExtResource( 3 )]
+[node name="ActivatableBlock6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 168 )
+buttons = [ NodePath("../Button") ]
+
+[node name="ActivatableBlock2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 136 )
+buttons = [ NodePath("../Button") ]
+
+[node name="ActivatableBlock3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 136 )
+buttons = [ NodePath("../Button") ]
+
+[node name="ActivatableBlock7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 104 )
+buttons = [ NodePath("../Button12") ]
+
+[node name="ActivatableBlock17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 88 )
+buttons = [ NodePath("../Button12") ]
+
+[node name="ActivatableBlock28" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 120 )
+buttons = [ NodePath("../Button12") ]
+
+[node name="ActivatableBlock29" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 136 )
+buttons = [ NodePath("../Button12") ]
+
+[node name="ActivatableBlock30" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 152 )
+buttons = [ NodePath("../Button12") ]
+
+[node name="ActivatableBlock31" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 168 )
+buttons = [ NodePath("../Button12") ]
+
+[node name="ActivatableBlock32" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 40 )
+buttons = [ NodePath("../Button13") ]
+
+[node name="ActivatableBlock34" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 56 )
+buttons = [ NodePath("../Button13") ]
+
+[node name="ActivatableBlock66" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 40 )
+buttons = [ NodePath("../Button13") ]
+
+[node name="ActivatableBlock97" parent="." instance=ExtResource( 7 )]
 position = Vector2( 136, 40 )
+buttons = [ NodePath("../Button13") ]
 
-[node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 120, 184 )
-player_color = Color( 1, 0.843137, 0, 1 )
+[node name="ActivatableBlock8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 104 )
+buttons = [ NodePath("../Button4") ]
 
-[node name="Box (2x2)" parent="." instance=ExtResource( 8 )]
-position = Vector2( 160, 112 )
+[node name="ActivatableBlock9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 104 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 104 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock26" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 104 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock27" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 120 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 40 )
+buttons = [ NodePath("../Button2") ]
+
+[node name="ActivatableBlock12" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 40 )
+buttons = [ NodePath("../Button2") ]
+
+[node name="ActivatableBlock13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 40 )
+buttons = [ NodePath("../Button2") ]
+
+[node name="ActivatableBlock14" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 40 )
+buttons = [ NodePath("../Button2") ]
+
+[node name="ActivatableBlock15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 40 )
+buttons = [ NodePath("../Button2") ]
+
+[node name="ActivatableBlock16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 280, 40 )
+buttons = [ NodePath("../Button2") ]
+
+[node name="ActivatableBlock19" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 120 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock20" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 104 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock21" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 104 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock22" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 104 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock23" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 104 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock24" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 72 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock33" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 72 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock35" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 56 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock36" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 40 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock37" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 40 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock38" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 40 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock39" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 40 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock40" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 40 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock41" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 56 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock42" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 72 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock43" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 72 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock44" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 72 )
+buttons = [ NodePath("../Button5") ]
+
+[node name="ActivatableBlock45" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 104 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock46" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 104 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock47" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 104 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock48" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 120 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock49" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 136 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock50" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 136 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock51" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 152 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock52" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 168 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock53" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 168 )
+buttons = [ NodePath("../Button6") ]
+
+[node name="ActivatableBlock54" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 152 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock55" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 136 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock56" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 136 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock59" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 120 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock60" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 104 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock61" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 88 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock57" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 136 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock58" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 152 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock62" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 168 )
+buttons = [ NodePath("../Button7") ]
+
+[node name="ActivatableBlock63" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock64" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock65" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock67" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock68" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 152 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock69" parent="." instance=ExtResource( 7 )]
+position = Vector2( 280, 152 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock70" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 152 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock71" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock72" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock73" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 168 )
+buttons = [ NodePath("../Button8") ]
+
+[node name="ActivatableBlock77" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 120 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock78" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 120 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock79" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 120 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock80" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 120 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock81" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 104 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock82" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 88 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock83" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 72 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock84" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 72 )
+buttons = [ NodePath("../Button9") ]
+
+[node name="ActivatableBlock85" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 40 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock86" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 40 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock87" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 40 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock88" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 40 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock89" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 56 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock90" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 72 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock91" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 72 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock94" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 72 )
+buttons = [ NodePath("../Button11") ]
+
+[node name="ActivatableBlock95" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 72 )
+buttons = [ NodePath("../Button11") ]
+
+[node name="ActivatableBlock93" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 88 )
+buttons = [ NodePath("../Button10") ]
+
+[node name="ActivatableBlock74" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 152 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock75" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 136 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock76" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 120 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock25" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 88 )
+buttons = [ NodePath("../Button3") ]
+
+[node name="ActivatableBlock4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 136 )
+buttons = [ NodePath("../Button") ]
+
+[node name="ActivatableBlock5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 152 )
+buttons = [ NodePath("../Button") ]
+
+[node name="TileMap" parent="." instance=ExtResource( 9 )]
+tile_set = SubResource( 137 )
+tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -65533, 1, 1, -65532, 1, 1, -65531, 1, 1, -65530, 1, 1, -65529, 1, 1, -65528, 1, 1, -65527, 1, 1, -65526, 1, 1, -65525, 1, 1, -65524, 1, 1, -65523, 1, 1, -65522, 1, 1, -65521, 1, 1, -65520, 1, 1, -65519, 1, 1, -65518, 1, 1, -65517, 1, 1, -65516, 1, 1, -65515, 1, 1, -65514, 1, 1, -65513, 1, 1, -65512, 1, 1, -65511, 1, 2, 65535, 1, 65536, 0, 1, 65537, 1, 1, 65537, 2, 1, 65537, 3, 1, 65537, 4, 1, 65537, 5, 1, 65537, 6, 1, 65537, 7, 1, 65537, 8, 1, 65537, 9, 1, 65537, 10, 1, 65537, 11, 1, 65537, 12, 1, 65537, 13, 1, 65537, 14, 1, 65537, 15, 1, 65537, 16, 1, 65537, 17, 1, 65537, 18, 1, 65537, 19, 1, 65537, 20, 1, 65537, 21, 1, 65537, 22, 1, 65537, 23, 1, 65537, 24, 1, 65537, 25, 1, 65538, 131071, 1, 65536, 65536, 1, 65541, 65537, 1, 131073, 65538, 1, 131073, 65539, 1, 131073, 65540, 1, 131073, 65541, 1, 131073, 65542, 1, 131073, 65543, 1, 131073, 65544, 1, 131073, 65545, 1, 131073, 65546, 1, 131073, 65547, 1, 131073, 65548, 1, 131073, 65549, 1, 131073, 65550, 1, 131073, 65551, 1, 131073, 65552, 1, 131073, 65553, 1, 131073, 65554, 1, 131073, 65555, 1, 131073, 65556, 1, 131073, 65557, 1, 131073, 65558, 1, 131073, 65559, 1, 131073, 65560, 1, 65542, 65561, 1, 65538, 196607, 1, 65536, 131072, 1, 65538, 131096, 1, 65536, 131097, 1, 65538, 262143, 1, 65536, 196608, 1, 65538, 196632, 1, 65536, 196633, 1, 65538, 327679, 1, 65536, 262144, 1, 65538, 262168, 1, 65536, 262169, 1, 65538, 393215, 1, 65536, 327680, 1, 65538, 327704, 1, 65536, 327705, 1, 65538, 458751, 1, 65536, 393216, 1, 65538, 393240, 1, 65536, 393241, 1, 65538, 524287, 1, 65536, 458752, 1, 65538, 458776, 1, 65536, 458777, 1, 65538, 589823, 1, 65536, 524288, 1, 65538, 524312, 1, 65536, 524313, 1, 65538, 655359, 1, 65536, 589824, 1, 65538, 589848, 1, 65536, 589849, 1, 65538, 720895, 1, 65536, 655360, 1, 65538, 655384, 1, 65536, 655385, 1, 65538, 786431, 1, 65536, 720896, 1, 262149, 720897, 1, 196609, 720898, 1, 196609, 720899, 1, 196609, 720900, 1, 196609, 720901, 1, 196609, 720902, 1, 196609, 720903, 1, 196609, 720904, 1, 196609, 720905, 1, 196609, 720906, 1, 196609, 720907, 1, 196609, 720908, 1, 196609, 720909, 1, 196609, 720910, 1, 196609, 720911, 1, 196609, 720912, 1, 196609, 720913, 1, 196609, 720914, 1, 196609, 720915, 1, 196609, 720916, 1, 196609, 720917, 1, 196609, 720918, 1, 196609, 720919, 1, 196609, 720920, 1, 262150, 720921, 1, 65538, 851967, 1, 65536, 786432, 1, 65538, 786456, 1, 65536, 786457, 1, 65538, 917503, 1, 65536, 851968, 1, 131077, 851969, 1, 1, 851970, 1, 1, 851971, 1, 1, 851972, 1, 1, 851973, 1, 1, 851974, 1, 1, 851975, 1, 1, 851976, 1, 1, 851977, 1, 1, 851978, 1, 1, 851979, 1, 1, 851980, 1, 1, 851981, 1, 1, 851982, 1, 1, 851983, 1, 1, 851984, 1, 1, 851985, 1, 1, 851986, 1, 1, 851987, 1, 1, 851988, 1, 1, 851989, 1, 1, 851990, 1, 1, 851991, 1, 1, 851992, 1, 131078, 851993, 1, 65538, 983039, 1, 131072, 917504, 1, 131073, 917505, 1, 131073, 917506, 1, 131073, 917507, 1, 131073, 917508, 1, 131073, 917509, 1, 131073, 917510, 1, 131073, 917511, 1, 131073, 917512, 1, 131073, 917513, 1, 131073, 917514, 1, 131073, 917515, 1, 131073, 917516, 1, 131073, 917517, 1, 131073, 917518, 1, 131073, 917519, 1, 131073, 917520, 1, 131073, 917521, 1, 131073, 917522, 1, 131073, 917523, 1, 131073, 917524, 1, 131073, 917525, 1, 131073, 917526, 1, 131073, 917527, 1, 131073, 917528, 1, 131073, 917529, 1, 131074 )
+
+[node name="SceneChanger" parent="." instance=ExtResource( 1 )]
+
+[node name="PlayerController" parent="." instance=ExtResource( 2 )]
+position = Vector2( -16, -8 )
+player_root_nodes = [ NodePath("../Player2"), NodePath("../Player1") ]
+
+[node name="Player1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 24, 168 )
+
+[node name="Player2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 144, 200 )
+
+[node name="Exit" parent="." instance=ExtResource( 5 )]
+position = Vector2( 376, 40 )
+rotation = -1.57079
+
+[node name="ActivatableBlock92" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 152 )
+
+[node name="ActivatableBlock96" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 152 )
+
+[node name="ActivatableBlock98" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 120 )
+
+[node name="ActivatableBlock99" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 120 )
+
+[node name="ActivatableBlock100" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 120 )
+
+[node name="ActivatableBlock101" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 120 )
+
+[node name="ActivatableBlock102" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 104 )
+
+[node name="ActivatableBlock103" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 88 )
+
+[node name="ActivatableBlock104" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 72 )
+
+[node name="ActivatableBlock105" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 56 )
+
+[node name="ActivatableBlock106" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 56 )
+
+[node name="ActivatableBlock107" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 56 )
+
+[node name="ActivatableBlock108" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 88 )
+
+[node name="ActivatableBlock109" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 88 )
+
+[node name="ActivatableBlock110" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 88 )
+
+[node name="ActivatableBlock111" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 72 )
+
+[node name="ActivatableBlock112" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 56 )
+
+[node name="ActivatableBlock113" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 168 )
+
+[node name="ActivatableBlock114" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 152 )
+
+[node name="ActivatableBlock115" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 152 )
+
+[node name="ActivatableBlock116" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 136 )
+
+[node name="ActivatableBlock117" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 152 )
+
+[node name="ActivatableBlock118" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 168 )
+
+[node name="ActivatableBlock119" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 168 )
+
+[node name="ActivatableBlock120" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168, 152 )
+
+[node name="ActivatableBlock121" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 152 )
+
+[node name="ActivatableBlock122" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 136 )
+
+[node name="ActivatableBlock123" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 120 )
+
+[node name="ActivatableBlock124" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 120 )
+
+[node name="ActivatableBlock125" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 104 )
+
+[node name="ActivatableBlock126" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 88 )
+
+[node name="ActivatableBlock127" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 88 )
+
+[node name="ActivatableBlock129" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 56 )
+
+[node name="ActivatableBlock130" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 56 )
+
+[node name="ActivatableBlock131" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 56 )
+
+[node name="ActivatableBlock132" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 40 )
+
+[node name="ActivatableBlock133" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 88 )
+
+[node name="ActivatableBlock134" parent="." instance=ExtResource( 7 )]
+position = Vector2( 104, 88 )
+
+[node name="ActivatableBlock135" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 72 )
+
+[node name="ActivatableBlock136" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 56 )
+
+[node name="ActivatableBlock137" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 40 )
+
+[node name="ActivatableBlock138" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 104 )
+
+[node name="ActivatableBlock139" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 88 )
+
+[node name="ActivatableBlock140" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 104 )
+
+[node name="ActivatableBlock141" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 120 )
+
+[node name="ActivatableBlock142" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 120 )
+
+[node name="ActivatableBlock143" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 136 )
+
+[node name="ActivatableBlock144" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 152 )
+
+[node name="ActivatableBlock145" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 136 )
+
+[node name="ActivatableBlock146" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 136 )
+
+[node name="ActivatableBlock147" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 152 )
+
+[node name="ActivatableBlock148" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 152 )
+
+[node name="ActivatableBlock149" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 136 )
+
+[node name="ActivatableBlock150" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 136 )
+
+[node name="ActivatableBlock151" parent="." instance=ExtResource( 7 )]
+position = Vector2( 280, 136 )
+
+[node name="ActivatableBlock152" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 136 )
+
+[node name="ActivatableBlock153" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 120 )
+
+[node name="ActivatableBlock154" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 136 )
+
+[node name="ActivatableBlock155" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 120 )
+buttons = [ NodePath("../Button4") ]
+
+[node name="ActivatableBlock156" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 152 )
+
+[node name="ActivatableBlock157" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 152 )
+
+[node name="ActivatableBlock158" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 168 )
+
+[node name="ActivatableBlock159" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 152 )
+
+[node name="ActivatableBlock160" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 136 )
+
+[node name="ActivatableBlock161" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 120 )
+
+[node name="ActivatableBlock162" parent="." instance=ExtResource( 7 )]
+position = Vector2( 376, 56 )
+
+[node name="ActivatableBlock163" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 56 )
+
+[node name="ActivatableBlock164" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 72 )
+
+[node name="ActivatableBlock165" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 72 )
+
+[node name="ActivatableBlock166" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 56 )
+
+[node name="ActivatableBlock167" parent="." instance=ExtResource( 7 )]
+position = Vector2( 344, 88 )
+
+[node name="ActivatableBlock168" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 88 )
+
+[node name="ActivatableBlock169" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 72 )
+
+[node name="ActivatableBlock170" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 56 )
+
+[node name="ActivatableBlock172" parent="." instance=ExtResource( 7 )]
+position = Vector2( 280, 56 )
+
+[node name="ActivatableBlock173" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 56 )
+
+[node name="ActivatableBlock174" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 40 )
+
+[node name="ActivatableBlock175" parent="." instance=ExtResource( 7 )]
+position = Vector2( 280, 88 )
+
+[node name="ActivatableBlock176" parent="." instance=ExtResource( 7 )]
+position = Vector2( 296, 88 )
+
+[node name="ActivatableBlock177" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 88 )
+
+[node name="ActivatableBlock178" parent="." instance=ExtResource( 7 )]
+position = Vector2( 264, 104 )
+
+[node name="ActivatableBlock179" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 104 )
+
+[node name="ActivatableBlock180" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 88 )
+
+[node name="ActivatableBlock181" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 88 )
+
+[node name="ActivatableBlock182" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 104 )
+
+[node name="ActivatableBlock183" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 72 )
+
+[node name="ActivatableBlock184" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, 56 )
+
+[node name="ActivatableBlock185" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 56 )
+
+[node name="ActivatableBlock186" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 56 )
+
+[node name="ActivatableBlock171" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 56 )
+
+[node name="ActivatableBlock187" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 88 )
+
+[node name="ActivatableBlock188" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 104 )
+
+[node name="ActivatableBlock189" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 152 )
