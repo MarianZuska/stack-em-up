@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://Scenes/Objects/Spikes.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Objects/TileMap.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Objects/Lever.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Particles/Interaction.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1048,7 +1050,7 @@ position = Vector2( 200, 152 )
 
 [node name="Door" parent="." instance=ExtResource( 8 )]
 position = Vector2( 248, 152 )
-buttons = [ NodePath("../Button") ]
+buttons = [ NodePath("../Button"), NodePath("../Lever") ]
 
 [node name="Spikes" parent="." instance=ExtResource( 1 )]
 position = Vector2( 280, 120 )
@@ -1058,3 +1060,7 @@ position = Vector2( 264, 120 )
 
 [node name="Exit" parent="." instance=ExtResource( 6 )]
 position = Vector2( 296, 152 )
+
+[node name="Lever" parent="." instance=ExtResource( 11 )]
+position = Vector2( 80, 120 )
+particles_on_press = ExtResource( 12 )

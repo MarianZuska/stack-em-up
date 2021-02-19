@@ -16,9 +16,10 @@ func _physics_process(delta):
 				if next_level == null: 
 					next_level = get_tree().current_scene.filename
 				var play_death_sound = false
-				if is_death and body.is_controlled:
+				if is_death and not Utils.game_over:
 					body.is_controlled = false
 					play_death_sound = true
+					Utils.game_over = true
 
 				if play_particles != null and (play_death_sound or is_win):
 					var particles = play_particles.instance()

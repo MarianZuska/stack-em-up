@@ -1342,13 +1342,13 @@ player_root_nodes = [ NodePath("../Player1"), NodePath("../Player2") ]
 [node name="SceneChanger" parent="." instance=ExtResource( 11 )]
 
 [node name="StackSign" type="Sprite" parent="."]
-position = Vector2( 274.015, 173.165 )
-scale = Vector2( 2, 2 )
+position = Vector2( 269.497, 177.252 )
+scale = Vector2( 1.70326, 1.5807 )
 texture = ExtResource( 13 )
 
 [node name="UnstackSign" type="Sprite" parent="."]
-position = Vector2( 351.055, 171.716 )
-scale = Vector2( 2, 2 )
+position = Vector2( 353.252, 176 )
+scale = Vector2( 1.83333, 1.75 )
 texture = ExtResource( 12 )
 
 [node name="TileMap" parent="." instance=ExtResource( 4 )]

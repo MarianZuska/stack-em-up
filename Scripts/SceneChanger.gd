@@ -7,14 +7,15 @@ onready var black = get_node("Control/BlackRect")
 
 func change_scene(path, delay = 0.5, play_win = false, play_death = false):
 	if play_win:
-		SoundManager.play("res://Resources/Sound/SFX/Pickup.wav", null, -10)
+		SoundManager.play("res://Resources/Sound/SFX/Pickup.wav", -10)
 	elif play_death:
-		SoundManager.play("res://Resources/Sound/SFX/Hurt.wav", null, -10)
+		SoundManager.play("res://Resources/Sound/SFX/Hurt.wav", -10)
 	
 	yield(get_tree().create_timer(delay), "timeout")
 	animation_player.play("Fade")
 	yield(animation_player, "animation_finished")
 	assert(get_tree().change_scene(path) == OK)
+	Utils.game_over = false
 	animation_player.play_backwards("Fade")
 	yield(animation_player, "animation_finished")
 	emit_signal("scene_changed")

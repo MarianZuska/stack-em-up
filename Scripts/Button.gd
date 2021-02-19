@@ -1,7 +1,7 @@
 extends Area2D
 
 var is_pressed = false
-
+var was_pressed = false
 export(PackedScene) var particles_on_press = null
 
 func _physics_process(delta):
@@ -13,6 +13,8 @@ func _physics_process(delta):
 			break
 			
 	if is_pressed:
+		if not was_pressed:
+			SoundManager.play("res://Resources/Sound/SFX/Land3.wav", -15)
 		print($Sprite.frame)
 		if $Sprite.frame == 0 and particles_on_press != null:
 			var particles = particles_on_press.instance()
@@ -23,3 +25,6 @@ func _physics_process(delta):
 		$Sprite.frame = 1
 	else:
 		$Sprite.frame = 0
+		
+	
+	was_pressed = is_pressed
