@@ -10,7 +10,7 @@
 [ext_resource path="res://Scenes/Objects/ActivatableBlock.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Objects/Lever.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Objects/Spikes.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Resources/Sprites/Signs/StackSign.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Sprites/LeverSign.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Objects/Torch.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -1410,8 +1410,8 @@ player_root_nodes = [ NodePath("../Player1") ]
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 136, 136 )
 
-[node name="StackSign" type="Sprite" parent="."]
-position = Vector2( 72, 80 )
+[node name="LeverSign" type="Sprite" parent="."]
+position = Vector2( 72, 72 )
 texture = ExtResource( 11 )
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
