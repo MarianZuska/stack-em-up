@@ -1372,6 +1372,7 @@ player_color = Color( 0.12549, 0, 1, 1 )
 
 [node name="Player2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 280, 200 )
+player_color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
 
 [node name="Player3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 216, 56 )

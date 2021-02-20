@@ -41,9 +41,11 @@ player_root_nodes = [ NodePath("../Player"), NodePath("../Player2") ]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 231.077, 21.4048 )
+player_color = Color( 0.180392, 0.937255, 0.117647, 1 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 304, 24 )
+position = Vector2( 304, 24.7937 )
+player_color = Color( 0.94902, 0.894118, 0.0901961, 1 )
 
 [node name="SceneChanger" parent="." instance=ExtResource( 1 )]
 

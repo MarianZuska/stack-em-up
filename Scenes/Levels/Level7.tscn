@@ -1411,9 +1411,11 @@ position = Vector2( 152, 184 )
 
 [node name="PlayerRoot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 40, 112 )
+player_color = Color( 0.960784, 0.968627, 0.0235294, 1 )
 
 [node name="PlayerRoot2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 40, 192 )
+player_color = Color( 0.952941, 0.0509804, 0.0509804, 1 )
 
 [node name="PlayerRoot3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 296, 184 )

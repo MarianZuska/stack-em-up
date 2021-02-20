@@ -1376,6 +1376,7 @@ position = Vector2( 152, 136 )
 
 [node name="PlayerRoot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 64, 88 )
+player_color = Color( 0.956863, 0.0431373, 0.0431373, 1 )
 
 [node name="PlayerController" parent="." instance=ExtResource( 9 )]
 player_root_nodes = [ NodePath("../PlayerRoot") ]

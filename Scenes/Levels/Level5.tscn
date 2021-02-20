@@ -1376,9 +1376,10 @@ buttons = [ NodePath("../Button") ]
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 136, 40 )
+player_color = Color( 0.980392, 0.0313726, 0.0313726, 1 )
 
 [node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 120, 184 )
+position = Vector2( 120, 183.735 )
 player_color = Color( 1, 0.843137, 0, 1 )
 
 [node name="Box (2x2)" parent="." instance=ExtResource( 8 )]

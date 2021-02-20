@@ -1409,6 +1409,7 @@ player_root_nodes = [ NodePath("../Player1") ]
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 136, 136 )
+player_color = Color( 0.960784, 0.0313726, 0.0313726, 1 )
 
 [node name="LeverSign" type="Sprite" parent="."]
 position = Vector2( 72, 72 )
