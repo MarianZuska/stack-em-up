@@ -15,9 +15,9 @@ func _physics_process(delta):
 		particles.restart()
 		
 		if is_pressed:
-			$Sprite.frame = 1
-		else:
 			$Sprite.frame = 0
+		else:
+			$Sprite.frame = 1
 		
 		is_pressed = not is_pressed
 
