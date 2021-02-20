@@ -1494,15 +1494,23 @@ next_level = "res://Scenes/Levels/Level6komma5.tscn"
 
 [node name="Exit8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 312, 24 )
-next_level = "res://Scenes/Levels/Level7.tscn"
+next_level = "res://Scenes/Levels/Level6komma7.tscn"
 
 [node name="Exit9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 344, 24 )
-next_level = "res://Scenes/Levels/Level8.tscn"
+next_level = "res://Scenes/Levels/Level7.tscn"
 
 [node name="Exit10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 56, 88 )
+next_level = "res://Scenes/Levels/Level8.tscn"
+
+[node name="Exit14" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 88 )
 next_level = "res://Scenes/Levels/Level9.tscn"
+
+[node name="Exit15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 120, 88 )
+next_level = "res://Scenes/Levels/Level10.tscn"
 
 [node name="BackGround17" type="Sprite" parent="."]
 position = Vector2( 88, 176 )

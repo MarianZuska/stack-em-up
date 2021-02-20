@@ -1416,7 +1416,7 @@ texture = ExtResource( 11 )
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 328, 120 )
-next_level = "res://Scenes/Levels/Level7.tscn"
+next_level = "res://Scenes/Levels/Level6komma7.tscn"
 
 [node name="Spikes3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 184, 232 )

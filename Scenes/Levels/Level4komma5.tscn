@@ -1333,6 +1333,37 @@ resource_local_to_scene = true
 
 [node name="Node2D" type="Node2D"]
 
+[node name="BackGround1" type="Sprite" parent="."]
+position = Vector2( 56, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround2" type="Sprite" parent="."]
+position = Vector2( 144, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround3" type="Sprite" parent="."]
+position = Vector2( 232, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround6" type="Sprite" parent="."]
+position = Vector2( 192, 208 )
+scale = Vector2( 1, -1 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround4" type="Sprite" parent="."]
+position = Vector2( 320, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround5" type="Sprite" parent="."]
+position = Vector2( 408, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
 [node name="StackSign" type="Sprite" parent="."]
 position = Vector2( 104, 72 )
 texture = ExtResource( 7 )
@@ -1364,34 +1395,3 @@ player_color = Color( 0.529412, 0.745098, 0.780392, 1 )
 [node name="Exit" parent="." instance=ExtResource( 8 )]
 position = Vector2( 352, 104 )
 next_level = "res://Scenes/Levels/Level5.tscn"
-
-[node name="BackGround1" type="Sprite" parent="."]
-position = Vector2( 56, 104 )
-z_index = -1
-texture = ExtResource( 11 )
-
-[node name="BackGround2" type="Sprite" parent="."]
-position = Vector2( 144, 104 )
-z_index = -1
-texture = ExtResource( 11 )
-
-[node name="BackGround3" type="Sprite" parent="."]
-position = Vector2( 232, 104 )
-z_index = -1
-texture = ExtResource( 11 )
-
-[node name="BackGround6" type="Sprite" parent="."]
-position = Vector2( 192, 208 )
-scale = Vector2( 1, -1 )
-z_index = -1
-texture = ExtResource( 11 )
-
-[node name="BackGround4" type="Sprite" parent="."]
-position = Vector2( 320, 104 )
-z_index = -1
-texture = ExtResource( 11 )
-
-[node name="BackGround5" type="Sprite" parent="."]
-position = Vector2( 408, 104 )
-z_index = -1
-texture = ExtResource( 11 )

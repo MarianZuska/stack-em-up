@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [ 7 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 resource_name = "Death"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -39,8 +39,7 @@ tracks/0/keys = {
 "values": [ 22, 23, 24, 25, 26, 27, 28, 29 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Jump"
+[sub_resource type="Animation" id=4]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -55,8 +54,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "Land"
+[sub_resource type="Animation" id=5]
 length = 0.25
 step = 0.05
 tracks/0/type = "value"
@@ -72,7 +70,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 12, 13 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -88,8 +86,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 7, 0 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "RunLow"
+[sub_resource type="Animation" id=7]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -105,7 +102,7 @@ tracks/0/keys = {
 "values": [ 14, 15, 16, 17, 18, 19, 20, 0 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -120,7 +117,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 4.23285, 1.2792 )
 
 [node name="PlayerRoot" type="Node2D"]
@@ -160,16 +157,15 @@ cast_to = Vector2( 0, -3 )
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 1 )
 hframes = 30
-frame = 29
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="Player"]
 anims/Dash = SubResource( 2 )
-anims/Death = SubResource( 9 )
-anims/Jump = SubResource( 3 )
-anims/Land = SubResource( 4 )
-anims/Run = SubResource( 5 )
-anims/RunLow = SubResource( 6 )
-anims/Stand = SubResource( 7 )
+anims/Death = SubResource( 3 )
+anims/Jump = SubResource( 4 )
+anims/Land = SubResource( 5 )
+anims/Run = SubResource( 6 )
+anims/RunLow = SubResource( 7 )
+anims/Stand = SubResource( 8 )
 
 [node name="ParticleAnchor" type="Node2D" parent="Player"]
 position = Vector2( 0, 5.596 )
@@ -181,7 +177,7 @@ emitting = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HeadTrigger"]
 position = Vector2( 0, -8.08582 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 one_way_collision_margin = 0.0
 
 [node name="Anchor" type="Node2D" parent="."]

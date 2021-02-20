@@ -1351,7 +1351,7 @@ buttons = [ NodePath("../Button"), NodePath("../Button3") ]
 
 [node name="Exit" parent="." instance=ExtResource( 5 )]
 position = Vector2( 248, 168 )
-next_level = "res://Scenes/Levels/Level5.tscn"
+next_level = "res://Scenes/Levels/Level4komma5.tscn"
 
 [node name="Spikes" parent="." instance=ExtResource( 6 )]
 position = Vector2( 136, 120 )

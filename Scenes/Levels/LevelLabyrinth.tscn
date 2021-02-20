@@ -1761,6 +1761,7 @@ position = Vector2( 144, 200 )
 [node name="Exit" parent="." instance=ExtResource( 5 )]
 position = Vector2( 376, 40 )
 rotation = -1.57079
+next_level = "res://Scenes/Levels/LevelSpikeyBoy.tscn"
 
 [node name="ActivatableBlock92" parent="." instance=ExtResource( 7 )]
 position = Vector2( 40, 152 )
