@@ -73,7 +73,9 @@ func _physics_process(delta):
 		c[3] = 1
 		sprite.modulate = c
 
-	if can_move:
+	if Utils.game_over:
+		animationPlayer.play("Death")
+	elif can_move:
 		if is_controlled:
 			run(delta)
 			jump(delta)

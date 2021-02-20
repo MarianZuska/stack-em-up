@@ -5,6 +5,7 @@ onready var selectors = [
 	$CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer/Selector,
 	$CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/Selector,
 	$CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/Selector,
+	$CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer5/HBoxContainer/Selector
 	]
 
 var currentSelection = 0
@@ -22,15 +23,15 @@ func setCurrentSelection(index):
 
 func handleSelection(_currentSelection):
 	if currentSelection == 0:
-		SceneChanger.change_scene("res://Scenes/Levels/Level1.tscn", 0)
+		SoundManager.toogle_music()
 	elif currentSelection == 1:
-		print("Clicked LevelSelector!")
-		SceneChanger.change_scene("res://Scenes/Levels/LevelSelector.tscn", 0)
+		SoundManager.change_volume(10)
 	elif currentSelection == 2:
-		print("Clicked options!")
-		SceneChanger.change_scene("res://Scenes/Levels/Options.tscn", 0)
+		SoundManager.change_volume(-10)
 	elif currentSelection == 3:
-		get_tree().quit()
+		Utils.toggle_timer()
+	elif currentSelection == 4:
+		SceneChanger.change_scene("res://Scenes/Levels/MainMenu.tscn", 0)
 		
 func validate_index(index):
 	return clamp(index, 0, selectors.size()-1)
