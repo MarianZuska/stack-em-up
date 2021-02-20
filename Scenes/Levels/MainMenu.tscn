@@ -1306,3 +1306,4 @@ tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 5, -6
 
 [node name="PlayerRoot" parent="TileMap" instance=ExtResource( 7 )]
 position = Vector2( 312.269, 78.8547 )
+player_color = Color( 0.92549, 0.0862745, 0.0862745, 1 )

@@ -1436,6 +1436,7 @@ player_root_nodes = [ NodePath("../Player1"), NodePath("../Player2"), NodePath("
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 72, 128 )
+player_color = Color( 0.894118, 0.117647, 0.317647, 1 )
 
 [node name="Player2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 88, 200 )
