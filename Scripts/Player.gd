@@ -69,8 +69,11 @@ func _physics_process(delta):
 		sprite.modulate = parent.player_color
 		
 	else:	
-		var c = parent.player_color / 3 
-		c[3] = 1
+		var c = Color(parent.player_color)
+		c.r /= 3
+		c.g /= 3
+		c.b /= 3
+		c.a = 1
 		sprite.modulate = c
 
 	if Utils.game_over:
@@ -119,8 +122,11 @@ func close_down():
 
 func particles():
 	
-	var c = parent.player_color / 3.5
-	c[3] = 1
+	var c = Color(parent.player_color)
+	c.r /= 3
+	c.g /= 3
+	c.b /= 3
+	c.a = 1
 		
 	var land = false
 	var jump = false
