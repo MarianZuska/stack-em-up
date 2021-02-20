@@ -6,7 +6,6 @@ export(float) var time = 0.1
 onready var next_flicker = Utils.get_time() + time
 onready var start_scale = $Light.texture_scale
 onready var target_scale = start_scale
-onready var rng = RandomNumberGenerator.new()
 onready var noise = OpenSimplexNoise.new()
 
 func _ready() -> void:

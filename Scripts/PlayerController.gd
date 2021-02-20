@@ -47,7 +47,7 @@ func stack_on_player(curr_player):
 	resize_collision_shape(curr_player)
 	handle_movable_objects()
 	
-	SoundManager.play("res://Resources/Sound/SFX/Weird.wav", -10)
+	SoundManager.play("res://Resources/Sound/SFX/Weird.wav", -25)
 
 func unstack_for_player(curr_player):
 	var player = curr_player.player_on_top
@@ -61,7 +61,7 @@ func unstack_for_player(curr_player):
 		resize_collision_shape(curr_player)
 	handle_movable_objects()
 	
-	SoundManager.play("res://Resources/Sound/SFX/Weird.wav", -10)
+	SoundManager.play("res://Resources/Sound/SFX/Weird.wav", -25)
 		
 func get_collision_shape(for_player):
 	return for_player.get_child(1)
