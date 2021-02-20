@@ -1577,3 +1577,4 @@ player_color = Color( 0.898039, 0.92549, 0.580392, 1 )
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 392, 8 )
+next_level = "res://Scenes/Levels/EndingScreen.tscn"

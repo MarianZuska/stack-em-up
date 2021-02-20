@@ -2,8 +2,8 @@ extends Node
 
 var time_s = 0.0
 var game_over = false
-var timer_on = false
 
+var timer_on = false
 var timer = null
 onready var timer_scene = preload("res://Scenes/Levels/Timer.tscn")
 
@@ -11,9 +11,10 @@ func get_time():
 	return time_s
 
 # also returns true on level selector scene
-func in_level():
+func can_pause():
 	var scene_name = get_tree().current_scene.filename
-	return scene_name.begins_with("res://Scenes/Levels/Level") 
+	return (scene_name.begins_with("res://Scenes/Levels/Level") or 
+		scene_name == "res://Scenes/Levels/EndingScreen.gd")
 
 func _process(delta):
 	time_s += delta

@@ -13,7 +13,7 @@ func play(file_path, volume=-30):
 		
 		self.add_child(audio_player)
 		audio_player.stream = load(file_path)
-		audio_player.volume_db = volume + volume_modifier
+		audio_player.volume_db = clamp(volume + volume_modifier, -80, 0)
 		audio_player.play()
 
 func toogle_music():
@@ -22,12 +22,12 @@ func toogle_music():
 	if not music_on:
 		music_player.volume_db = -80
 	else:
-		music_player.volume_db = -35 + volume_modifier
+		music_player.volume_db = clamp(-35 + volume_modifier, -80, 0)
 
 func change_volume(amount):
 	volume_modifier = clamp(volume_modifier + amount, MIN_VOLUME, MAX_VOLUME)
 	if music_on:
-		music_player.volume_db = -35 + volume_modifier
+		music_player.volume_db = clamp(-35 + volume_modifier, -80, 0)
 
 func _ready():
 	music_player = AudioStreamPlayer.new()

@@ -30,7 +30,7 @@ func _process(delta):
 	if Input.is_action_pressed("reset"):
 		change_scene(get_tree().current_scene.filename, 0)
 	if Input.is_action_pressed("ui_cancel") and not pause_menu_on:
-		if Utils.in_level():
+		if Utils.can_pause():
 			var pause = pause_menu_scene.instance()
 			get_tree().get_root().get_child(0).add_child(pause)
 			pause_menu_on = true

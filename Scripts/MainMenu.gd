@@ -22,6 +22,8 @@ func setCurrentSelection(index):
 
 func handleSelection(_currentSelection):
 	if currentSelection == 0:
+		if Utils.timer != null:
+			Utils.timer.start()
 		SceneChanger.change_scene("res://Scenes/Levels/Level1.tscn", 0)
 	elif currentSelection == 1:
 		print("Clicked LevelSelector!")
