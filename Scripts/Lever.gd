@@ -24,6 +24,7 @@ func _physics_process(delta):
 func overlaps():
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "Player": 
-			return true
+		if body.name == "Player":
+			if body.is_controlled:
+				return true
 	return false

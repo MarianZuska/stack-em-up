@@ -1353,7 +1353,7 @@ tile_data = PoolIntArray( -2, 1, 0, -1, 1, 1, -65536, 1, 1, -65535, 1, 1, -65534
 
 [node name="Exit" parent="TileMap" instance=ExtResource( 5 )]
 position = Vector2( 376, 184 )
-next_level = "res://Scenes/Levels/Level8.tscn"
+next_level = "res://Scenes/Levels/Level7komma5.tscn"
 
 [node name="Spikes" parent="TileMap" instance=ExtResource( 6 )]
 position = Vector2( 120, 184 )
