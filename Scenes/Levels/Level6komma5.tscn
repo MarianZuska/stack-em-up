@@ -1333,6 +1333,7 @@ resource_local_to_scene = true
 4/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( -16, 0 )
 
 [node name="Lever" parent="." instance=ExtResource( 9 )]
 position = Vector2( 72, 120 )

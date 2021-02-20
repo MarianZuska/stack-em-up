@@ -107,9 +107,9 @@ func _physics_process(delta):
 func sound():
 	if Utils.get_time() >= 0.5:
 		if not was_on_floor and is_on_floor():
-			SoundManager.play(LAND_SFX, 0)
+			SoundManager.play(LAND_SFX, -20)
 		if jumping_now:
-			SoundManager.play(JUMP_SFX, -20)
+			SoundManager.play(JUMP_SFX, -30)
 		
 
 func close_down():

@@ -68,6 +68,7 @@ animations = [ {
 } ]
 
 [node name="Spikes" type="Area2D"]
+z_index = 2
 script = ExtResource( 1 )
 play_particles = ExtResource( 2 )
 is_death = true
@@ -78,5 +79,5 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 15 )
-frame = 3
+frame = 8
 playing = true

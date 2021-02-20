@@ -1200,8 +1200,7 @@ margin_right = 93.0
 margin_bottom = 14.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
-margin_left = 20.0
-margin_right = 73.0
+margin_right = 93.0
 margin_bottom = 14.0
 
 [node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -1214,9 +1213,9 @@ text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
 margin_left = 11.0
-margin_right = 53.0
+margin_right = 93.0
 margin_bottom = 14.0
-rect_min_size = Vector2( 42, 0 )
+rect_min_size = Vector2( 82, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
@@ -1255,8 +1254,7 @@ margin_right = 93.0
 margin_bottom = 50.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
-margin_left = 20.0
-margin_right = 73.0
+margin_right = 93.0
 margin_bottom = 14.0
 
 [node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
@@ -1269,8 +1267,9 @@ text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
 margin_left = 11.0
-margin_right = 53.0
+margin_right = 93.0
 margin_bottom = 14.0
+rect_min_size = Vector2( 82, 0 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "Options"
@@ -1281,8 +1280,7 @@ margin_right = 93.0
 margin_bottom = 68.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
-margin_left = 20.0
-margin_right = 73.0
+margin_right = 93.0
 margin_bottom = 14.0
 
 [node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
@@ -1295,9 +1293,9 @@ text = ">"
 
 [node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
 margin_left = 11.0
-margin_right = 53.0
+margin_right = 93.0
 margin_bottom = 14.0
-rect_min_size = Vector2( 42, 0 )
+rect_min_size = Vector2( 82, 0 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "Exit"

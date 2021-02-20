@@ -109,6 +109,7 @@ tracks/0/keys = {
 extents = Vector2( 4.23285, 1.2792 )
 
 [node name="PlayerRoot" type="Node2D"]
+z_index = 1
 script = ExtResource( 3 )
 
 [node name="Player" type="KinematicBody2D" parent="." groups=[

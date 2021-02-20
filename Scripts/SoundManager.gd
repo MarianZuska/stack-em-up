@@ -10,4 +10,4 @@ func play(file_path, volume=-30):
 	audio_player.play()
 
 func _ready():
-	play("res://Resources/Sound/Music/On My Way.wav", -20)
+	play("res://Resources/Sound/Music/On My Way.wav", -35)

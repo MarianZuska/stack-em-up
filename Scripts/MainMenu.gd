@@ -32,9 +32,8 @@ func handleSelection(_currentSelection):
 	elif currentSelection == 3:
 		get_tree().quit()
 		
-		
 func validate_index(index):
-	return (index + len(selectors)) % len(selectors)
+	return clamp(index, 0, selectors.size()-1)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_down"):
