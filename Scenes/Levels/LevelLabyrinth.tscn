@@ -1678,10 +1678,6 @@ buttons = [ NodePath("../Button9") ]
 position = Vector2( 216, 72 )
 buttons = [ NodePath("../Button9") ]
 
-[node name="ActivatableBlock84" parent="." instance=ExtResource( 7 )]
-position = Vector2( 200, 72 )
-buttons = [ NodePath("../Button9") ]
-
 [node name="ActivatableBlock85" parent="." instance=ExtResource( 7 )]
 position = Vector2( 200, 40 )
 buttons = [ NodePath("../Button10") ]
@@ -1884,7 +1880,7 @@ position = Vector2( 104, 88 )
 position = Vector2( 184, 72 )
 
 [node name="ActivatableBlock136" parent="." instance=ExtResource( 7 )]
-position = Vector2( 200, 56 )
+position = Vector2( 184, 56 )
 
 [node name="ActivatableBlock137" parent="." instance=ExtResource( 7 )]
 position = Vector2( 184, 40 )
@@ -2035,7 +2031,8 @@ position = Vector2( 216, 56 )
 position = Vector2( 216, 56 )
 
 [node name="ActivatableBlock171" parent="." instance=ExtResource( 7 )]
-position = Vector2( 328, 56 )
+position = Vector2( 312, 56 )
+buttons = [ NodePath("../Button11") ]
 
 [node name="ActivatableBlock187" parent="." instance=ExtResource( 7 )]
 position = Vector2( 360, 88 )

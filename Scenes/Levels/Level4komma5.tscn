@@ -1,4 +1,4 @@
-[gd_scene load_steps=148 format=2]
+[gd_scene load_steps=149 format=2]
 
 [ext_resource path="res://Scenes/Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Objects/Exit.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Objects/Box (2x2).tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Sprites/BackGround1.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1363,3 +1364,34 @@ player_color = Color( 0.529412, 0.745098, 0.780392, 1 )
 [node name="Exit" parent="." instance=ExtResource( 8 )]
 position = Vector2( 352, 104 )
 next_level = "res://Scenes/Levels/Level5.tscn"
+
+[node name="BackGround1" type="Sprite" parent="."]
+position = Vector2( 56, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround2" type="Sprite" parent="."]
+position = Vector2( 144, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround3" type="Sprite" parent="."]
+position = Vector2( 232, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround6" type="Sprite" parent="."]
+position = Vector2( 192, 208 )
+scale = Vector2( 1, -1 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround4" type="Sprite" parent="."]
+position = Vector2( 320, 104 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="BackGround5" type="Sprite" parent="."]
+position = Vector2( 408, 104 )
+z_index = -1
+texture = ExtResource( 11 )
