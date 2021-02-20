@@ -14,7 +14,7 @@ func get_time():
 func can_pause():
 	var scene_name = get_tree().current_scene.filename
 	return (scene_name.begins_with("res://Scenes/Levels/Level") or 
-		scene_name == "res://Scenes/Levels/EndingScreen.gd")
+		scene_name == "res://Scenes/Levels/EndingScreen.tscn")
 
 func _process(delta):
 	time_s += delta
