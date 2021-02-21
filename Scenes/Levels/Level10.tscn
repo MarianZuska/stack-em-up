@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=150 format=2]
 
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
@@ -8,11 +8,10 @@
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Objects/Exit.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Objects/Spikes.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Objects/Lever.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Objects/ActivatableBlock.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Objects/Button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Objects/TimedBlock.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Objects/Torch.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Resources/Sprites/BackGround2.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Fonts/ChiKareGo.ttf" type="DynamicFontData" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -414,15 +413,12 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=134]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=135]
 points = PoolVector2Array( 0, 0, 18, 0, 18, 18, 0, 18 )
 
-[sub_resource type="ConvexPolygonShape2D" id=136]
+[sub_resource type="ConvexPolygonShape2D" id=135]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="TileSet" id=137]
+[sub_resource type="TileSet" id=136]
 resource_local_to_scene = true
 0/name = "Tileset.png 0"
 0/texture = ExtResource( 2 )
@@ -1155,124 +1151,118 @@ resource_local_to_scene = true
 "shape": SubResource( 114 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 4, 3 ),
+"autotile_coord": Vector2( 7, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 115 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 5, 3 ),
+"autotile_coord": Vector2( 7, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 116 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 6, 3 ),
+"autotile_coord": Vector2( 7, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 117 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 7, 3 ),
+"autotile_coord": Vector2( 6, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 118 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 8, 3 ),
+"autotile_coord": Vector2( 5, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 119 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 9, 3 ),
+"autotile_coord": Vector2( 4, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 120 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 10, 3 ),
+"autotile_coord": Vector2( 5, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 121 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 9, 2 ),
+"autotile_coord": Vector2( 5, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 122 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 8, 2 ),
+"autotile_coord": Vector2( 7, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 123 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 9, 1 ),
+"autotile_coord": Vector2( 6, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 124 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 9, 0 ),
+"autotile_coord": Vector2( 7, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 125 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 8, 1 ),
+"autotile_coord": Vector2( 8, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 126 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 7, 0 ),
+"autotile_coord": Vector2( 9, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 127 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 7, 1 ),
+"autotile_coord": Vector2( 10, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 128 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 7, 2 ),
+"autotile_coord": Vector2( 8, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 129 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 6, 1 ),
+"autotile_coord": Vector2( 9, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 130 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 5, 2 ),
+"autotile_coord": Vector2( 8, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 131 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 5, 4 ),
+"autotile_coord": Vector2( 9, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 132 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 7, 4 ),
+"autotile_coord": Vector2( 9, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 133 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 3, 4 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 134 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -1300,14 +1290,14 @@ resource_local_to_scene = true
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 135 )
+3/shape = SubResource( 134 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 135 ),
+"shape": SubResource( 134 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
@@ -1321,260 +1311,167 @@ resource_local_to_scene = true
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 136 )
+4/shape = SubResource( 135 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 136 ),
+"shape": SubResource( 135 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
+5/name = "DungeonTiles.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 97, 26, 1, 0 )
+5/tile_mode = 1
+5/autotile/bitmask_mode = 0
+5/autotile/bitmask_flags = [  ]
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 32, 32 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="DynamicFont" id=137]
+font_data = ExtResource( 14 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="BackGround2" type="Sprite" parent="."]
-position = Vector2( 352, 184 )
-z_index = -1
-texture = ExtResource( 13 )
+[node name="TileMap" parent="." instance=ExtResource( 4 )]
+tile_set = SubResource( 136 )
+tile_data = PoolIntArray( -2, 1, 0, -1, 1, 1, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -65533, 1, 1, -65532, 1, 1, -65531, 1, 1, -65530, 1, 1, -65529, 1, 1, -65528, 1, 1, -65527, 1, 1, -65526, 1, 1, -65525, 1, 1, -65524, 1, 1, -65523, 1, 1, -65522, 1, 1, -65521, 1, 1, -65520, 1, 1, -65519, 1, 1, -65518, 1, 1, -65517, 1, 1, -65516, 1, 1, -65515, 1, 1, -65514, 1, 1, -65513, 1, 1, -65512, 1, 1, -65511, 1, 2, 65534, 1, 65536, 65535, 1, 65537, 0, 1, 65541, 1, 1, 131073, 2, 1, 131073, 3, 1, 131073, 4, 1, 131073, 5, 1, 131073, 6, 1, 131073, 7, 1, 131073, 8, 1, 131073, 9, 1, 131073, 10, 1, 131073, 11, 1, 131073, 12, 1, 131073, 13, 1, 131073, 14, 1, 131073, 15, 1, 131073, 16, 1, 131073, 17, 1, 131073, 18, 1, 131073, 19, 1, 131073, 20, 1, 131073, 21, 1, 131073, 22, 1, 131073, 23, 1, 131073, 24, 1, 65542, 25, 1, 65538, 131070, 1, 65536, 131071, 1, 65537, 65536, 1, 65538, 65560, 1, 65536, 65561, 1, 65538, 196606, 1, 65536, 196607, 1, 65537, 131072, 1, 65538, 131096, 1, 65536, 131097, 1, 65538, 262142, 1, 65536, 262143, 1, 65537, 196608, 1, 65538, 196632, 1, 65536, 196633, 1, 65538, 327678, 1, 65536, 327679, 1, 65537, 262144, 1, 65538, 262168, 1, 65536, 262169, 1, 65538, 393214, 1, 65536, 393215, 1, 65537, 327680, 1, 65538, 327704, 1, 65536, 327705, 1, 65538, 458750, 1, 65536, 458751, 1, 65537, 393216, 1, 65538, 393240, 1, 65536, 393241, 1, 65538, 524286, 1, 65536, 524287, 1, 65537, 458752, 1, 65538, 458776, 1, 65536, 458777, 1, 65538, 589822, 1, 65536, 589823, 1, 65537, 524288, 1, 131077, 524289, 1, 1, 524290, 1, 1, 524291, 1, 1, 524292, 1, 1, 524293, 1, 1, 524294, 1, 1, 524295, 1, 1, 524296, 1, 1, 524297, 1, 1, 524298, 1, 1, 524299, 1, 1, 524300, 1, 1, 524301, 1, 1, 524302, 1, 1, 524303, 1, 1, 524304, 1, 1, 524305, 1, 1, 524306, 1, 1, 524307, 1, 1, 524308, 1, 1, 524309, 1, 1, 524310, 1, 1, 524311, 1, 1, 524312, 1, 131078, 524313, 1, 65538, 655358, 1, 65536, 655359, 1, 65537, 589824, 1, 65541, 589825, 1, 131073, 589826, 1, 131073, 589827, 1, 131073, 589828, 1, 131073, 589829, 1, 131073, 589830, 1, 131073, 589831, 1, 131073, 589832, 1, 131073, 589833, 1, 131073, 589834, 1, 131073, 589835, 1, 131073, 589836, 1, 131073, 589837, 1, 131073, 589838, 1, 131073, 589839, 1, 131073, 589840, 1, 65542, 589841, 1, 65537, 589842, 1, 65537, 589843, 1, 65537, 589844, 1, 65537, 589845, 1, 65537, 589846, 1, 65537, 589847, 1, 65537, 589848, 1, 65537, 589849, 1, 65538, 720894, 1, 65536, 720895, 1, 65537, 655360, 1, 65538, 655376, 1, 65536, 655377, 1, 65541, 655378, 1, 131073, 655379, 1, 131073, 655380, 1, 131073, 655381, 1, 131073, 655382, 1, 131073, 655383, 1, 131073, 655384, 1, 65542, 655385, 1, 65538, 786430, 1, 65536, 786431, 1, 65537, 720896, 1, 65538, 720912, 1, 65536, 720913, 1, 65538, 720920, 1, 65536, 720921, 1, 65538, 851966, 1, 65536, 851967, 1, 65537, 786432, 1, 65538, 786437, 1, 3, 786439, 1, 3, 786441, 1, 3, 786443, 1, 3, 786448, 1, 65536, 786449, 1, 131077, 786450, 1, 1, 786451, 1, 1, 786452, 1, 1, 786453, 1, 1, 786454, 1, 1, 786455, 1, 1, 786456, 1, 131078, 786457, 1, 65538, 917502, 1, 65536, 917503, 1, 65537, 851968, 1, 131077, 851969, 1, 1, 851970, 1, 1, 851971, 1, 1, 851972, 1, 1, 851973, 1, 131080, 851974, 1, 1, 851975, 1, 131080, 851976, 1, 1, 851977, 1, 131080, 851978, 1, 1, 851979, 1, 131080, 851980, 1, 1, 851981, 1, 1, 851982, 1, 1, 851983, 1, 1, 851984, 1, 131078, 851985, 1, 65537, 851986, 1, 65537, 851987, 1, 65537, 851988, 1, 65537, 851989, 1, 65537, 851990, 1, 65537, 851991, 1, 65537, 851992, 1, 65537, 851993, 1, 65538, 983038, 1, 131072, 983039, 1, 131073, 917504, 1, 131073, 917505, 1, 131073, 917506, 1, 131073, 917507, 1, 131073, 917508, 1, 131073, 917509, 1, 131073, 917510, 1, 131073, 917511, 1, 131073, 917512, 1, 131073, 917513, 1, 131073, 917514, 1, 131073, 917515, 1, 131073, 917516, 1, 131073, 917517, 1, 131073, 917518, 1, 131073, 917519, 1, 131073, 917520, 1, 131073, 917521, 1, 131073, 917522, 1, 131073, 917523, 1, 131073, 917524, 1, 131073, 917525, 1, 131073, 917526, 1, 131073, 917527, 1, 131073, 917528, 1, 131073, 917529, 1, 131074 )
 
-[node name="Torch" parent="." instance=ExtResource( 12 )]
-position = Vector2( 352, 176 )
+[node name="Exit" parent="TileMap" instance=ExtResource( 7 )]
+position = Vector2( 376, 184 )
+next_level = "res://Scenes/Levels/Level11.tscn"
 
-[node name="Lever" parent="." instance=ExtResource( 9 )]
-position = Vector2( 328, 200 )
+[node name="Spikes" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 120, 184 )
 
-[node name="Lever3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 376, 200 )
-
-[node name="Activatable" parent="." instance=ExtResource( 10 )]
-position = Vector2( 168, 152 )
-buttons = [ NodePath("../Lever") ]
-
-[node name="ActivatabaleBlocke2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 40, 56 )
-buttons = [ NodePath("../Lever3") ]
-
-[node name="ActivatabaleBlocke6" parent="." instance=ExtResource( 10 )]
-position = Vector2( 344, 128 )
-buttons = [ NodePath("../Lever3") ]
-do_invert = true
-
-[node name="ActivatabaleBlocke7" parent="." instance=ExtResource( 10 )]
-position = Vector2( 360, 88 )
-buttons = [ NodePath("../Lever") ]
-do_invert = true
-
-[node name="ActivatabaleBlocke3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 184, 40 )
-buttons = [ NodePath("../Lever") ]
-
-[node name="ActivatabaleBlocke4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 168, 40 )
-buttons = [ NodePath("../Lever") ]
-
-[node name="ActivatabaleBlocke5" parent="." instance=ExtResource( 10 )]
-position = Vector2( 152, 40 )
-buttons = [ NodePath("../Lever") ]
-
-[node name="ActivatabaleBlocke8" parent="." instance=ExtResource( 10 )]
-position = Vector2( 216, 40 )
-buttons = [ NodePath("../Lever") ]
-do_invert = true
-
-[node name="ActivatabaleBlocke9" parent="." instance=ExtResource( 10 )]
-position = Vector2( 232, 40 )
-buttons = [ NodePath("../Lever") ]
-do_invert = true
-
-[node name="ActivatabaleBlocke10" parent="." instance=ExtResource( 10 )]
-position = Vector2( 248, 40 )
-buttons = [ NodePath("../Lever") ]
-do_invert = true
-
-[node name="TimedBlock" parent="." instance=ExtResource( 11 )]
+[node name="Spikes19" parent="TileMap" instance=ExtResource( 8 )]
 position = Vector2( 88, 184 )
 
-[node name="TimedBlock7" parent="." instance=ExtResource( 11 )]
-position = Vector2( 152, 200 )
-do_invert = true
+[node name="Spikes4" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 104, 120 )
 
-[node name="TimedBlock3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 88, 88 )
-do_invert = true
+[node name="Spikes6" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 120, 120 )
 
-[node name="TimedBlock5" parent="." instance=ExtResource( 11 )]
-position = Vector2( 376, 40 )
-do_invert = true
+[node name="Spikes7" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 136, 120 )
 
-[node name="TimedBlock6" parent="." instance=ExtResource( 11 )]
-position = Vector2( 96, 24 )
-do_invert = true
+[node name="Spikes8" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 152, 120 )
 
-[node name="TimedBlock4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 152, 104 )
+[node name="Spikes9" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 168, 120 )
 
-[node name="TileMap" parent="." instance=ExtResource( 4 )]
-tile_set = SubResource( 137 )
-tile_data = PoolIntArray( 65560, 1, 196611, 131084, 1, 3, 196620, 1, 65539, 262156, 1, 65539, 327692, 1, 65539, 393228, 1, 65539, 458764, 1, 65539, 524300, 1, 65539, 589836, 1, 65539, 589843, 1, 4, 589844, 1, 196609, 589845, 1, 196609, 589846, 1, 196609, 589847, 1, 196609, 589848, 1, 7, 655372, 1, 65539, 655379, 1, 65539, 655384, 1, 65539, 720908, 1, 65539, 720915, 1, 65539, 720920, 1, 65539, 786444, 1, 65539, 786451, 1, 65539, 786456, 1, 65539, 851969, 1, 196611, 851980, 1, 65539, 851987, 1, 196612, 851988, 1, 196609, 851989, 1, 196609, 851990, 1, 196609, 851991, 1, 196609, 851992, 1, 196615, 917516, 1, 65539, 983052, 1, 131075 )
+[node name="Spikes10" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 264, 120 )
+
+[node name="Spikes15" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 184, 120 )
+
+[node name="Spikes16" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 280, 120 )
+
+[node name="Spikes17" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 296, 120 )
+
+[node name="Spikes18" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 312, 120 )
+
+[node name="Spikes11" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 248, 120 )
+
+[node name="Spikes12" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 232, 120 )
+
+[node name="Spikes13" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 216, 120 )
+
+[node name="Spikes14" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 200, 120 )
+
+[node name="Spikes3" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 184, 184 )
+
+[node name="Spikes2" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 152, 184 )
+
+[node name="PlayerRoot" parent="." instance=ExtResource( 3 )]
+position = Vector2( 40, 112 )
+player_color = Color( 0.960784, 0.968627, 0.0235294, 1 )
+
+[node name="PlayerRoot2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 40, 192 )
+player_color = Color( 0.952941, 0.0509804, 0.0509804, 1 )
+
+[node name="PlayerRoot3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 296, 184 )
+
+[node name="PlayerController" parent="." instance=ExtResource( 5 )]
+player_root_nodes = [ NodePath("../PlayerRoot"), NodePath("../PlayerRoot2"), NodePath("../PlayerRoot3") ]
 
 [node name="SceneChanger" parent="." instance=ExtResource( 6 )]
 
-[node name="Spikes" parent="." instance=ExtResource( 8 )]
-position = Vector2( 8, 232 )
+[node name="ActivatableBlock5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 280, 88 )
 
-[node name="Spikes2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 24, 232 )
+[node name="ActivatableBlock4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 208, 88 )
+do_invert = true
 
-[node name="Spikes3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 40, 232 )
+[node name="ActivatableBlock3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 168, 88 )
 
-[node name="Spikes4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 56, 232 )
+[node name="ActivatableBlock2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 128, 88 )
+do_invert = true
 
-[node name="Spikes5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 72, 232 )
+[node name="ActivatableBlock" parent="." instance=ExtResource( 11 )]
+position = Vector2( 88, 88 )
 
-[node name="Spikes6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 88, 232 )
+[node name="Door" parent="." instance=ExtResource( 10 )]
+position = Vector2( 320, 184 )
+buttons = [ NodePath("../Button") ]
 
-[node name="Spikes7" parent="." instance=ExtResource( 8 )]
-position = Vector2( 104, 232 )
+[node name="Door2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 352, 184 )
+buttons = [ NodePath("../Button2") ]
 
-[node name="Spikes8" parent="." instance=ExtResource( 8 )]
-position = Vector2( 120, 232 )
+[node name="Button" parent="." instance=ExtResource( 9 )]
+position = Vector2( 352, 120 )
 
-[node name="Spikes9" parent="." instance=ExtResource( 8 )]
-position = Vector2( 136, 232 )
+[node name="Button2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 240, 200 )
 
-[node name="Spikes10" parent="." instance=ExtResource( 8 )]
-position = Vector2( 152, 232 )
-
-[node name="Spikes11" parent="." instance=ExtResource( 8 )]
-position = Vector2( 168, 232 )
-
-[node name="Spikes12" parent="." instance=ExtResource( 8 )]
-position = Vector2( 184, 232 )
-
-[node name="Spikes14" parent="." instance=ExtResource( 8 )]
-position = Vector2( 216, 232 )
-
-[node name="Spikes15" parent="." instance=ExtResource( 8 )]
-position = Vector2( 232, 232 )
-
-[node name="Spikes16" parent="." instance=ExtResource( 8 )]
-position = Vector2( 248, 232 )
-
-[node name="Spikes17" parent="." instance=ExtResource( 8 )]
-position = Vector2( 264, 232 )
-
-[node name="Spikes18" parent="." instance=ExtResource( 8 )]
-position = Vector2( 280, 232 )
-
-[node name="Spikes19" parent="." instance=ExtResource( 8 )]
-position = Vector2( 296, 232 )
-
-[node name="Spikes20" parent="." instance=ExtResource( 8 )]
-position = Vector2( 312, 232 )
-
-[node name="Spikes21" parent="." instance=ExtResource( 8 )]
-position = Vector2( 328, 232 )
-
-[node name="Spikes22" parent="." instance=ExtResource( 8 )]
-position = Vector2( 344, 232 )
-
-[node name="Spikes23" parent="." instance=ExtResource( 8 )]
-position = Vector2( 360, 232 )
-
-[node name="Spikes24" parent="." instance=ExtResource( 8 )]
-position = Vector2( 376, 232 )
-
-[node name="Spikes25" parent="." instance=ExtResource( 8 )]
-position = Vector2( 392, 232 )
-
-[node name="Spikes26" parent="." instance=ExtResource( 8 )]
-position = Vector2( 408, 232 )
-
-[node name="Spikes27" parent="." instance=ExtResource( 8 )]
-position = Vector2( 424, 232 )
-
-[node name="Spikes28" parent="." instance=ExtResource( 8 )]
-position = Vector2( 440, 232 )
-
-[node name="Spikes29" parent="." instance=ExtResource( 8 )]
-position = Vector2( 456, 232 )
-
-[node name="Spikes30" parent="." instance=ExtResource( 8 )]
-position = Vector2( 472, 232 )
-
-[node name="Spikes31" parent="." instance=ExtResource( 8 )]
-position = Vector2( 488, 232 )
-
-[node name="Spikes32" parent="." instance=ExtResource( 8 )]
-position = Vector2( 504, 232 )
-
-[node name="Spikes33" parent="." instance=ExtResource( 8 )]
-position = Vector2( 520, 232 )
-
-[node name="Spikes34" parent="." instance=ExtResource( 8 )]
-position = Vector2( 536, 232 )
-
-[node name="Spikes35" parent="." instance=ExtResource( 8 )]
-position = Vector2( 552, 232 )
-
-[node name="Spikes36" parent="." instance=ExtResource( 8 )]
-position = Vector2( 568, 232 )
-
-[node name="Spikes37" parent="." instance=ExtResource( 8 )]
-position = Vector2( -184, 232 )
-
-[node name="Spikes38" parent="." instance=ExtResource( 8 )]
-position = Vector2( -168, 232 )
-
-[node name="Spikes39" parent="." instance=ExtResource( 8 )]
-position = Vector2( -152, 232 )
-
-[node name="Spikes40" parent="." instance=ExtResource( 8 )]
-position = Vector2( -136, 232 )
-
-[node name="Spikes41" parent="." instance=ExtResource( 8 )]
-position = Vector2( -120, 232 )
-
-[node name="Spikes42" parent="." instance=ExtResource( 8 )]
-position = Vector2( -104, 232 )
-
-[node name="Spikes43" parent="." instance=ExtResource( 8 )]
-position = Vector2( -88, 232 )
-
-[node name="Spikes44" parent="." instance=ExtResource( 8 )]
-position = Vector2( -72, 232 )
-
-[node name="Spikes45" parent="." instance=ExtResource( 8 )]
-position = Vector2( -56, 232 )
-
-[node name="Spikes46" parent="." instance=ExtResource( 8 )]
-position = Vector2( -40, 232 )
-
-[node name="Spikes47" parent="." instance=ExtResource( 8 )]
-position = Vector2( -24, 232 )
-
-[node name="Spikes48" parent="." instance=ExtResource( 8 )]
-position = Vector2( -7.99999, 232 )
-
-[node name="PlayerController" parent="." instance=ExtResource( 5 )]
-position = Vector2( 68.5109, 164.125 )
-player_root_nodes = [ NodePath("../Player1"), NodePath("../Player2") ]
-
-[node name="Player1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 24, 200 )
-player_color = Color( 0.47451, 0.878431, 0.537255, 1 )
-
-[node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 352, 200 )
-player_color = Color( 0.898039, 0.92549, 0.580392, 1 )
-
-[node name="Exit" parent="." instance=ExtResource( 7 )]
-position = Vector2( 392, 8 )
-next_level = "res://Scenes/Levels/EndingScreen.tscn"
+[node name="LevelName" type="Label" parent="."]
+light_mask = 0
+margin_left = -16.4719
+margin_top = -0.471939
+margin_right = 415.528
+margin_bottom = 13.5281
+rect_pivot_offset = Vector2( 288.78, 79.6416 )
+custom_fonts/font = SubResource( 137 )
+custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
+text = "10. Crucial Timing"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

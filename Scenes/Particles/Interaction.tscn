@@ -5,7 +5,7 @@ _data = [ Vector2( 0, 0.979545 ), 0.0, 0.0, 0, 0, Vector2( 0.282178, 0.606818 ),
 
 [node name="Interaction" type="CPUParticles2D"]
 emitting = false
-amount = 200
+amount = 50
 one_shot = true
 explosiveness = 1.0
 flag_align_y = true
@@ -15,6 +15,7 @@ gravity = Vector2( 0, 0 )
 initial_velocity = 44.82
 initial_velocity_random = 0.22
 linear_accel = -86.0
+scale_amount = 2.0
 scale_amount_curve = SubResource( 1 )
 hue_variation = -1.0
 anim_speed = 14.02

@@ -61,19 +61,28 @@ onready var fx_land = preload("res://Scenes/Particles/LandParticle.tscn")
 onready var fx_jump = preload("res://Scenes/Particles/JumpDustParticle.tscn")
 onready var fx_foot = get_node("ParticleAnchor/FootDustParticle")
 
+func darken_color(col):
+	var c = Color(col)
+	c.r /= 3
+	c.g /= 3
+	c.b /= 3
+	c.a = 1
+	return c
+
 	
 func _physics_process(delta):
 	jumping_now = false
+	
+	if player_on_top != null:
+		var pos = get_global_position() + Vector2(0, -16)
+		player_on_top.set_global_position(pos)
+		player_on_top.sprite.flip_h = sprite.flip_h
 	
 	if is_controlled:
 		sprite.modulate = parent.player_color
 		
 	else:	
-		var c = Color(parent.player_color)
-		c.r /= 3
-		c.g /= 3
-		c.b /= 3
-		c.a = 1
+		var c = darken_color(parent.player_color)
 		sprite.modulate = c
 
 	if Utils.game_over:
@@ -103,10 +112,7 @@ func _physics_process(delta):
 			if collision.collider.is_in_group("movable"):
 				# collision.collider.apply_central_impulse(-collision.normal * velocity.length() * 0.5)
 				collision.collider.apply_central_impulse(-collision.normal * PUSH_FACTOR)
-	if player_on_top != null:
-		var pos = get_global_position() + Vector2(0, -16)
-		player_on_top.set_global_position(pos)
-		player_on_top.sprite.flip_h = sprite.flip_h
+
 	
 
 func sound():
@@ -122,11 +128,7 @@ func close_down():
 
 func particles():
 	
-	var c = Color(parent.player_color)
-	c.r /= 3
-	c.g /= 3
-	c.b /= 3
-	c.a = 1
+	var c = darken_color(parent.player_color)
 		
 	var land = false
 	var jump = false

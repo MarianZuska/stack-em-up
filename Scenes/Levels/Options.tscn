@@ -7,7 +7,6 @@
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=5]
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=6]
 
-
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
 

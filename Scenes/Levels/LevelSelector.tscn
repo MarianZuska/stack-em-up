@@ -1335,28 +1335,6 @@ font_data = ExtResource( 10 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TileMap" parent="." instance=ExtResource( 4 )]
-tile_set = SubResource( 137 )
-tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -65533, 1, 1, -65532, 1, 1, -65531, 1, 1, -65530, 1, 1, -65529, 1, 1, -65528, 1, 1, -65527, 1, 1, -65526, 1, 1, -65525, 1, 1, -65524, 1, 1, -65523, 1, 1, -65522, 1, 1, -65521, 1, 1, -65520, 1, 1, -65519, 1, 1, -65518, 1, 1, -65517, 1, 1, -65516, 1, 1, -65515, 1, 1, -65514, 1, 1, -65513, 1, 1, -65512, 1, 1, -65511, 1, 2, 65535, 1, 65536, 0, 1, 65537, 1, 1, 65541, 2, 1, 131073, 3, 1, 131073, 4, 1, 131073, 5, 1, 131073, 6, 1, 131073, 7, 1, 131073, 8, 1, 131073, 9, 1, 131073, 10, 1, 131073, 11, 1, 131073, 12, 1, 131073, 13, 1, 131073, 14, 1, 131073, 15, 1, 131073, 16, 1, 131073, 17, 1, 131073, 18, 1, 131073, 19, 1, 131073, 20, 1, 131073, 21, 1, 131073, 22, 1, 131073, 23, 1, 65542, 24, 1, 65537, 25, 1, 65538, 131071, 1, 65536, 65536, 1, 65541, 65537, 1, 131074, 65559, 1, 131072, 65560, 1, 65542, 65561, 1, 65538, 196607, 1, 65536, 131072, 1, 65538, 131075, 1, 196611, 131077, 1, 196611, 131079, 1, 196611, 131081, 1, 196611, 131083, 1, 196611, 131085, 1, 196611, 131087, 1, 196611, 131089, 1, 196611, 131091, 1, 196611, 131093, 1, 196611, 131096, 1, 65536, 131097, 1, 65538, 262143, 1, 65536, 196608, 1, 65538, 196632, 1, 65536, 196633, 1, 65538, 327679, 1, 65536, 262144, 1, 131077, 262145, 1, 5, 262146, 1, 196609, 262147, 1, 196609, 262148, 1, 196609, 262149, 1, 196609, 262150, 1, 196609, 262151, 1, 196609, 262152, 1, 196609, 262153, 1, 196609, 262154, 1, 196609, 262155, 1, 196609, 262156, 1, 196609, 262157, 1, 196609, 262158, 1, 196609, 262159, 1, 196609, 262160, 1, 196609, 262161, 1, 196609, 262162, 1, 196609, 262163, 1, 196609, 262164, 1, 196609, 262165, 1, 196609, 262166, 1, 196609, 262167, 1, 6, 262168, 1, 131078, 262169, 1, 65538, 393215, 1, 65536, 327680, 1, 65541, 327681, 1, 131074, 327703, 1, 131072, 327704, 1, 65542, 327705, 1, 65538, 458751, 1, 65536, 393216, 1, 65538, 393219, 1, 196611, 393221, 1, 196611, 393223, 1, 196611, 393225, 1, 196611, 393227, 1, 196611, 393229, 1, 196611, 393231, 1, 196611, 393233, 1, 196611, 393235, 1, 196611, 393237, 1, 196611, 393240, 1, 65536, 393241, 1, 65538, 524287, 1, 65536, 458752, 1, 65538, 458776, 1, 65536, 458777, 1, 65538, 589823, 1, 65536, 524288, 1, 131077, 524289, 1, 5, 524290, 1, 196609, 524291, 1, 196609, 524292, 1, 196609, 524293, 1, 196609, 524294, 1, 196609, 524295, 1, 196609, 524296, 1, 196609, 524297, 1, 196609, 524298, 1, 196609, 524299, 1, 196609, 524300, 1, 196609, 524301, 1, 196609, 524302, 1, 196609, 524303, 1, 196609, 524304, 1, 196609, 524305, 1, 196609, 524306, 1, 196609, 524307, 1, 196609, 524308, 1, 196609, 524309, 1, 196609, 524310, 1, 196609, 524311, 1, 6, 524312, 1, 131078, 524313, 1, 65538, 655359, 1, 65536, 589824, 1, 65541, 589825, 1, 131074, 589847, 1, 131072, 589848, 1, 65542, 589849, 1, 65538, 720895, 1, 65536, 655360, 1, 65538, 655369, 1, 196611, 655372, 1, 196611, 655375, 1, 196611, 655384, 1, 65536, 655385, 1, 65538, 786431, 1, 65536, 720896, 1, 65538, 720920, 1, 65536, 720921, 1, 65538, 851967, 1, 65536, 786432, 1, 131077, 786433, 1, 1, 786434, 1, 1, 786435, 1, 1, 786436, 1, 1, 786437, 1, 1, 786438, 1, 1, 786439, 1, 1, 786440, 1, 1, 786441, 1, 1, 786442, 1, 1, 786443, 1, 1, 786444, 1, 1, 786445, 1, 1, 786446, 1, 1, 786447, 1, 1, 786448, 1, 1, 786449, 1, 1, 786450, 1, 1, 786451, 1, 1, 786452, 1, 1, 786453, 1, 1, 786454, 1, 1, 786455, 1, 1, 786456, 1, 131078, 786457, 1, 65538, 917503, 1, 65536, 851968, 1, 65537, 851969, 1, 65537, 851970, 1, 65537, 851971, 1, 65537, 851972, 1, 65537, 851973, 1, 65537, 851974, 1, 65537, 851975, 1, 65537, 851976, 1, 65537, 851977, 1, 65537, 851978, 1, 65537, 851979, 1, 65537, 851980, 1, 65537, 851981, 1, 65537, 851982, 1, 65537, 851983, 1, 65537, 851984, 1, 65537, 851985, 1, 65537, 851986, 1, 65537, 851987, 1, 65537, 851988, 1, 65537, 851989, 1, 65537, 851990, 1, 65537, 851991, 1, 65537, 851992, 1, 65537, 851993, 1, 65538, 983039, 1, 131072, 917504, 1, 131073, 917505, 1, 131073, 917506, 1, 131073, 917507, 1, 131073, 917508, 1, 131073, 917509, 1, 131073, 917510, 1, 131073, 917511, 1, 131073, 917512, 1, 131073, 917513, 1, 131073, 917514, 1, 131073, 917515, 1, 131073, 917516, 1, 131073, 917517, 1, 131073, 917518, 1, 131073, 917519, 1, 131073, 917520, 1, 131073, 917521, 1, 131073, 917522, 1, 131073, 917523, 1, 131073, 917524, 1, 131073, 917525, 1, 131073, 917526, 1, 131073, 917527, 1, 131073, 917528, 1, 131073, 917529, 1, 131074 )
-
-[node name="SceneChanger" parent="." instance=ExtResource( 6 )]
-
-[node name="PlayerController" parent="." instance=ExtResource( 5 )]
-position = Vector2( 68.5109, 164.125 )
-player_root_nodes = [ NodePath("../Player1"), NodePath("../Player2"), NodePath("../Player3") ]
-
-[node name="Player1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 32, 56 )
-player_color = Color( 0.894118, 0.0509804, 0.0509804, 1 )
-
-[node name="Player2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 32, 120 )
-player_color = Color( 0.14902, 1, 0, 1 )
-
-[node name="Player3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 96, 184 )
-player_color = Color( 1, 0.866667, 0, 1 )
-
 [node name="BackGround1" type="Sprite" parent="."]
 position = Vector2( 40, 112 )
 scale = Vector2( 0.625, 0.625 )
@@ -1453,8 +1431,30 @@ scale = Vector2( 0.625, 0.625 )
 z_index = -1
 texture = ExtResource( 9 )
 
+[node name="TileMap" parent="." instance=ExtResource( 4 )]
+tile_set = SubResource( 137 )
+tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -65533, 1, 1, -65532, 1, 1, -65531, 1, 1, -65530, 1, 1, -65529, 1, 1, -65528, 1, 1, -65527, 1, 1, -65526, 1, 1, -65525, 1, 1, -65524, 1, 1, -65523, 1, 1, -65522, 1, 1, -65521, 1, 1, -65520, 1, 1, -65519, 1, 1, -65518, 1, 1, -65517, 1, 1, -65516, 1, 1, -65515, 1, 1, -65514, 1, 1, -65513, 1, 1, -65512, 1, 1, -65511, 1, 2, 65535, 1, 65536, 0, 1, 65537, 1, 1, 65541, 2, 1, 131073, 3, 1, 131073, 4, 1, 131073, 5, 1, 131073, 6, 1, 131073, 7, 1, 131073, 8, 1, 131073, 9, 1, 131073, 10, 1, 131073, 11, 1, 131073, 12, 1, 131073, 13, 1, 131073, 14, 1, 131073, 15, 1, 131073, 16, 1, 131073, 17, 1, 131073, 18, 1, 131073, 19, 1, 131073, 20, 1, 131073, 21, 1, 131073, 22, 1, 131073, 23, 1, 65542, 24, 1, 65537, 25, 1, 65538, 131071, 1, 65536, 65536, 1, 65541, 65537, 1, 131074, 65559, 1, 131072, 65560, 1, 65542, 65561, 1, 65538, 196607, 1, 65536, 131072, 1, 65538, 131077, 1, 196611, 131079, 1, 196611, 131081, 1, 196611, 131083, 1, 196611, 131085, 1, 196611, 131087, 1, 196611, 131089, 1, 196611, 131091, 1, 196611, 131096, 1, 65536, 131097, 1, 65538, 262143, 1, 65536, 196608, 1, 65538, 196632, 1, 65536, 196633, 1, 65538, 327679, 1, 65536, 262144, 1, 131077, 262145, 1, 5, 262146, 1, 196609, 262147, 1, 196609, 262148, 1, 196609, 262149, 1, 196609, 262150, 1, 196609, 262151, 1, 196609, 262152, 1, 196609, 262153, 1, 196609, 262154, 1, 196609, 262155, 1, 196609, 262156, 1, 196609, 262157, 1, 196609, 262158, 1, 196609, 262159, 1, 196609, 262160, 1, 196609, 262161, 1, 196609, 262162, 1, 196609, 262163, 1, 196609, 262164, 1, 196609, 262165, 1, 196609, 262166, 1, 196609, 262167, 1, 6, 262168, 1, 131078, 262169, 1, 65538, 393215, 1, 65536, 327680, 1, 65541, 327681, 1, 131074, 327703, 1, 131072, 327704, 1, 65542, 327705, 1, 65538, 458751, 1, 65536, 393216, 1, 65538, 393221, 1, 196611, 393223, 1, 196611, 393225, 1, 196611, 393227, 1, 196611, 393229, 1, 196611, 393231, 1, 196611, 393233, 1, 196611, 393235, 1, 196611, 393240, 1, 65536, 393241, 1, 65538, 524287, 1, 65536, 458752, 1, 65538, 458776, 1, 65536, 458777, 1, 65538, 589823, 1, 65536, 524288, 1, 131077, 524289, 1, 5, 524290, 1, 196609, 524291, 1, 196609, 524292, 1, 196609, 524293, 1, 196609, 524294, 1, 196609, 524295, 1, 196609, 524296, 1, 196609, 524297, 1, 196609, 524298, 1, 196609, 524299, 1, 196609, 524300, 1, 196609, 524301, 1, 196609, 524302, 1, 196609, 524303, 1, 196609, 524304, 1, 196609, 524305, 1, 196609, 524306, 1, 196609, 524307, 1, 196609, 524308, 1, 196609, 524309, 1, 196609, 524310, 1, 196609, 524311, 1, 6, 524312, 1, 131078, 524313, 1, 65538, 655359, 1, 65536, 589824, 1, 65541, 589825, 1, 131074, 589847, 1, 131072, 589848, 1, 65542, 589849, 1, 65538, 720895, 1, 65536, 655360, 1, 65538, 655369, 1, 196611, 655372, 1, 196611, 655375, 1, 196611, 655384, 1, 65536, 655385, 1, 65538, 786431, 1, 65536, 720896, 1, 65538, 720920, 1, 65536, 720921, 1, 65538, 851967, 1, 65536, 786432, 1, 131077, 786433, 1, 1, 786434, 1, 1, 786435, 1, 1, 786436, 1, 1, 786437, 1, 1, 786438, 1, 1, 786439, 1, 1, 786440, 1, 1, 786441, 1, 1, 786442, 1, 1, 786443, 1, 1, 786444, 1, 1, 786445, 1, 1, 786446, 1, 1, 786447, 1, 1, 786448, 1, 1, 786449, 1, 1, 786450, 1, 1, 786451, 1, 1, 786452, 1, 1, 786453, 1, 1, 786454, 1, 1, 786455, 1, 1, 786456, 1, 131078, 786457, 1, 65538, 917503, 1, 65536, 851968, 1, 65537, 851969, 1, 65537, 851970, 1, 65537, 851971, 1, 65537, 851972, 1, 65537, 851973, 1, 65537, 851974, 1, 65537, 851975, 1, 65537, 851976, 1, 65537, 851977, 1, 65537, 851978, 1, 65537, 851979, 1, 65537, 851980, 1, 65537, 851981, 1, 65537, 851982, 1, 65537, 851983, 1, 65537, 851984, 1, 65537, 851985, 1, 65537, 851986, 1, 65537, 851987, 1, 65537, 851988, 1, 65537, 851989, 1, 65537, 851990, 1, 65537, 851991, 1, 65537, 851992, 1, 65537, 851993, 1, 65538, 983039, 1, 131072, 917504, 1, 131073, 917505, 1, 131073, 917506, 1, 131073, 917507, 1, 131073, 917508, 1, 131073, 917509, 1, 131073, 917510, 1, 131073, 917511, 1, 131073, 917512, 1, 131073, 917513, 1, 131073, 917514, 1, 131073, 917515, 1, 131073, 917516, 1, 131073, 917517, 1, 131073, 917518, 1, 131073, 917519, 1, 131073, 917520, 1, 131073, 917521, 1, 131073, 917522, 1, 131073, 917523, 1, 131073, 917524, 1, 131073, 917525, 1, 131073, 917526, 1, 131073, 917527, 1, 131073, 917528, 1, 131073, 917529, 1, 131074 )
+
+[node name="SceneChanger" parent="." instance=ExtResource( 6 )]
+
+[node name="PlayerController" parent="." instance=ExtResource( 5 )]
+position = Vector2( 68.5109, 164.125 )
+player_root_nodes = [ NodePath("../Player1"), NodePath("../Player2"), NodePath("../Player3") ]
+
+[node name="Player1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 56 )
+player_color = Color( 0.894118, 0.0509804, 0.0509804, 1 )
+
+[node name="Player2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 120 )
+player_color = Color( 0.14902, 1, 0, 1 )
+
+[node name="Player3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 96, 184 )
+player_color = Color( 1, 0.866667, 0, 1 )
+
 [node name="Exit" parent="." instance=ExtResource( 7 )]
-position = Vector2( 56, 24 )
+position = Vector2( 88, 24 )
 next_level = "res://Scenes/Levels/Level1.tscn"
 
 [node name="Exit11" parent="." instance=ExtResource( 7 )]
@@ -1465,53 +1465,65 @@ next_level = "res://Scenes/Levels/LevelLabyrinth.tscn"
 position = Vector2( 200, 152 )
 next_level = "res://Scenes/Levels/LevelSpikeyBoy.tscn"
 
+[node name="Exit18" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 152 )
+next_level = "res://Scenes/Levels/LevelEndurance.tscn"
+
 [node name="Exit2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 88, 24 )
+position = Vector2( 120, 24 )
 next_level = "res://Scenes/Levels/Level2.tscn"
 
 [node name="Exit3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 120, 24 )
+position = Vector2( 152, 24 )
 next_level = "res://Scenes/Levels/Level3.tscn"
 
 [node name="Exit4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 152, 24 )
+position = Vector2( 184, 24 )
 next_level = "res://Scenes/Levels/Level4.tscn"
 
 [node name="Exit5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 184, 24 )
-next_level = "res://Scenes/Levels/Level4komma5.tscn"
-
-[node name="Exit6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 216, 24 )
 next_level = "res://Scenes/Levels/Level5.tscn"
 
-[node name="Exit7" parent="." instance=ExtResource( 7 )]
+[node name="Exit6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 248, 24 )
 next_level = "res://Scenes/Levels/Level6.tscn"
 
-[node name="Exit13" parent="." instance=ExtResource( 7 )]
+[node name="Exit7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 280, 24 )
-next_level = "res://Scenes/Levels/Level6komma5.tscn"
-
-[node name="Exit8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 312, 24 )
-next_level = "res://Scenes/Levels/Level6komma7.tscn"
-
-[node name="Exit9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 344, 24 )
 next_level = "res://Scenes/Levels/Level7.tscn"
 
-[node name="Exit10" parent="." instance=ExtResource( 7 )]
-position = Vector2( 56, 88 )
+[node name="Exit13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 24 )
 next_level = "res://Scenes/Levels/Level8.tscn"
 
-[node name="Exit14" parent="." instance=ExtResource( 7 )]
+[node name="Exit8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 88, 88 )
 next_level = "res://Scenes/Levels/Level9.tscn"
 
-[node name="Exit15" parent="." instance=ExtResource( 7 )]
+[node name="Exit9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 120, 88 )
 next_level = "res://Scenes/Levels/Level10.tscn"
+
+[node name="Exit10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, 88 )
+next_level = "res://Scenes/Levels/Level11.tscn"
+
+[node name="Exit14" parent="." instance=ExtResource( 7 )]
+position = Vector2( 184, 88 )
+next_level = "res://Scenes/Levels/Level12.tscn"
+
+[node name="Exit15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 88 )
+next_level = "res://Scenes/Levels/Level13.tscn"
+
+[node name="Exit16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 248, 88 )
+next_level = "res://Scenes/Levels/Level14.tscn"
+
+[node name="Exit17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 280, 88 )
+next_level = "res://Scenes/Levels/Level15.tscn"
 
 [node name="BackGround17" type="Sprite" parent="."]
 position = Vector2( 88, 176 )
@@ -1525,9 +1537,9 @@ z_index = -1
 texture = ExtResource( 8 )
 
 [node name="OptionName" type="Label" parent="."]
-margin_left = 48.0
+margin_left = 80.0
 margin_top = 32.0
-margin_right = 64.0
+margin_right = 96.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1589,9 +1601,9 @@ __meta__ = {
 }
 
 [node name="OptionName2" type="Label" parent="."]
-margin_left = 80.0
+margin_left = 112.0
 margin_top = 32.0
-margin_right = 96.0
+margin_right = 128.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1605,9 +1617,9 @@ __meta__ = {
 }
 
 [node name="OptionName3" type="Label" parent="."]
-margin_left = 112.0
+margin_left = 144.0
 margin_top = 32.0
-margin_right = 128.0
+margin_right = 160.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1621,10 +1633,8 @@ __meta__ = {
 }
 
 [node name="OptionName24" type="Label" parent="."]
-margin_left = 144.0
-margin_top = 64.0
-margin_right = 248.0
-margin_bottom = 80.0
+margin_right = 416.0
+margin_bottom = 16.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
 custom_fonts/font = SubResource( 138 )
@@ -1637,9 +1647,8 @@ __meta__ = {
 }
 
 [node name="OptionName25" type="Label" parent="."]
-margin_left = 144.0
 margin_top = 128.0
-margin_right = 248.0
+margin_right = 416.0
 margin_bottom = 144.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1653,9 +1662,9 @@ __meta__ = {
 }
 
 [node name="OptionName4" type="Label" parent="."]
-margin_left = 144.0
+margin_left = 176.0
 margin_top = 32.0
-margin_right = 160.0
+margin_right = 192.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1669,9 +1678,9 @@ __meta__ = {
 }
 
 [node name="OptionName5" type="Label" parent="."]
-margin_left = 176.0
+margin_left = 208.0
 margin_top = 32.0
-margin_right = 192.0
+margin_right = 224.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1685,9 +1694,9 @@ __meta__ = {
 }
 
 [node name="OptionName6" type="Label" parent="."]
-margin_left = 208.0
+margin_left = 240.0
 margin_top = 32.0
-margin_right = 224.0
+margin_right = 256.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1701,9 +1710,9 @@ __meta__ = {
 }
 
 [node name="OptionName7" type="Label" parent="."]
-margin_left = 240.0
+margin_left = 272.0
 margin_top = 32.0
-margin_right = 256.0
+margin_right = 288.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1717,9 +1726,9 @@ __meta__ = {
 }
 
 [node name="OptionName8" type="Label" parent="."]
-margin_left = 272.0
+margin_left = 304.0
 margin_top = 32.0
-margin_right = 288.0
+margin_right = 320.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1733,10 +1742,10 @@ __meta__ = {
 }
 
 [node name="OptionName9" type="Label" parent="."]
-margin_left = 304.0
-margin_top = 32.0
-margin_right = 320.0
-margin_bottom = 48.0
+margin_left = 80.0
+margin_top = 96.0
+margin_right = 96.0
+margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
 custom_fonts/font = SubResource( 138 )
@@ -1749,10 +1758,10 @@ __meta__ = {
 }
 
 [node name="OptionName10" type="Label" parent="."]
-margin_left = 336.0
-margin_top = 32.0
-margin_right = 352.0
-margin_bottom = 48.0
+margin_left = 112.0
+margin_top = 96.0
+margin_right = 128.0
+margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
 custom_fonts/font = SubResource( 138 )
@@ -1765,9 +1774,9 @@ __meta__ = {
 }
 
 [node name="OptionName11" type="Label" parent="."]
-margin_left = 48.0
+margin_left = 144.0
 margin_top = 96.0
-margin_right = 64.0
+margin_right = 160.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1781,9 +1790,9 @@ __meta__ = {
 }
 
 [node name="OptionName12" type="Label" parent="."]
-margin_left = 80.0
+margin_left = 176.0
 margin_top = 96.0
-margin_right = 96.0
+margin_right = 192.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1797,9 +1806,9 @@ __meta__ = {
 }
 
 [node name="OptionName13" type="Label" parent="."]
-margin_left = 112.0
+margin_left = 208.0
 margin_top = 96.0
-margin_right = 128.0
+margin_right = 224.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1813,9 +1822,9 @@ __meta__ = {
 }
 
 [node name="OptionName14" type="Label" parent="."]
-margin_left = 144.0
+margin_left = 240.0
 margin_top = 96.0
-margin_right = 160.0
+margin_right = 256.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1829,9 +1838,9 @@ __meta__ = {
 }
 
 [node name="OptionName15" type="Label" parent="."]
-margin_left = 176.0
+margin_left = 272.0
 margin_top = 96.0
-margin_right = 192.0
+margin_right = 288.0
 margin_bottom = 112.0
 rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
@@ -1845,54 +1854,6 @@ __meta__ = {
 }
 
 [node name="OptionName16" type="Label" parent="."]
-margin_left = 208.0
-margin_top = 96.0
-margin_right = 224.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 16, 0 )
-rect_pivot_offset = Vector2( 288.78, 79.6416 )
-custom_fonts/font = SubResource( 138 )
-custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
-text = "16"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionName17" type="Label" parent="."]
-margin_left = 240.0
-margin_top = 96.0
-margin_right = 256.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 16, 0 )
-rect_pivot_offset = Vector2( 288.78, 79.6416 )
-custom_fonts/font = SubResource( 138 )
-custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
-text = "17"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionName18" type="Label" parent="."]
-margin_left = 272.0
-margin_top = 96.0
-margin_right = 288.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 16, 0 )
-rect_pivot_offset = Vector2( 288.78, 79.6416 )
-custom_fonts/font = SubResource( 138 )
-custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
-text = "18"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionName19" type="Label" parent="."]
 margin_left = 304.0
 margin_top = 96.0
 margin_right = 320.0
@@ -1901,23 +1862,7 @@ rect_min_size = Vector2( 16, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
 custom_fonts/font = SubResource( 138 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
-text = "19"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionName20" type="Label" parent="."]
-margin_left = 336.0
-margin_top = 96.0
-margin_right = 352.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 16, 0 )
-rect_pivot_offset = Vector2( 288.78, 79.6416 )
-custom_fonts/font = SubResource( 138 )
-custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
-text = "20"
+text = "16"
 align = 1
 valign = 1
 __meta__ = {

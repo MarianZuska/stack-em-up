@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=2]
+[gd_scene load_steps=149 format=2]
 
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/Objects/ActivatableBlock.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Objects/Button.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Objects/TileMap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/Fonts/ChiKareGo.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1329,6 +1330,9 @@ resource_local_to_scene = true
 } ]
 4/z_index = 0
 
+[sub_resource type="DynamicFont" id=138]
+font_data = ExtResource( 10 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Button" parent="." instance=ExtResource( 8 )]
@@ -2044,3 +2048,19 @@ position = Vector2( 360, 104 )
 
 [node name="ActivatableBlock189" parent="." instance=ExtResource( 7 )]
 position = Vector2( 216, 152 )
+
+[node name="LevelName" type="Label" parent="."]
+light_mask = 0
+margin_left = -16.4719
+margin_top = -0.471939
+margin_right = 415.528
+margin_bottom = 13.5281
+rect_pivot_offset = Vector2( 288.78, 79.6416 )
+custom_fonts/font = SubResource( 138 )
+custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
+text = "B1. Labyrinth"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

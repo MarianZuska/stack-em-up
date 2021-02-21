@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=2]
+[gd_scene load_steps=151 format=2]
 
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Objects/ActivatableBlock.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Resources/Fonts/ChiKareGo.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1331,6 +1332,9 @@ resource_local_to_scene = true
 } ]
 4/z_index = 0
 
+[sub_resource type="DynamicFont" id=138]
+font_data = ExtResource( 12 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource( 4 )]
@@ -1351,7 +1355,7 @@ buttons = [ NodePath("../Button"), NodePath("../Button3") ]
 
 [node name="Exit" parent="." instance=ExtResource( 5 )]
 position = Vector2( 248, 168 )
-next_level = "res://Scenes/Levels/Level4komma5.tscn"
+next_level = "res://Scenes/Levels/Level5.tscn"
 
 [node name="Spikes" parent="." instance=ExtResource( 6 )]
 position = Vector2( 136, 120 )
@@ -1425,3 +1429,19 @@ do_invert = true
 position = Vector2( 200, 96 )
 buttons = [ NodePath("../Button"), NodePath("../Button3") ]
 do_invert = true
+
+[node name="LevelName" type="Label" parent="."]
+light_mask = 0
+margin_left = -16.4719
+margin_top = -0.471939
+margin_right = 415.528
+margin_bottom = 13.5281
+rect_pivot_offset = Vector2( 288.78, 79.6416 )
+custom_fonts/font = SubResource( 138 )
+custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
+text = "04. Cooperation"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

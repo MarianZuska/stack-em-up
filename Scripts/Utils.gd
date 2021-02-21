@@ -1,5 +1,8 @@
 extends Node
 
+var deaths = 0
+var completed_levels = []
+
 var time_s = 0.0
 var game_over = false
 

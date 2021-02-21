@@ -1,4 +1,4 @@
-[gd_scene load_steps=148 format=2]
+[gd_scene load_steps=150 format=2]
 
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Resources/Sprites/BackGround2.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Fonts/ChiKareGo.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1330,6 +1331,9 @@ resource_local_to_scene = true
 } ]
 4/z_index = 0
 
+[sub_resource type="DynamicFont" id=138]
+font_data = ExtResource( 11 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource( 4 )]
@@ -1393,3 +1397,19 @@ position = Vector2( 266.073, 77.8241 )
 scale = Vector2( -1, -1 )
 z_index = -1
 texture = ExtResource( 8 )
+
+[node name="LevelName" type="Label" parent="."]
+light_mask = 0
+margin_left = -16.4719
+margin_top = -0.471939
+margin_right = 415.528
+margin_bottom = 13.5281
+rect_pivot_offset = Vector2( 288.78, 79.6416 )
+custom_fonts/font = SubResource( 138 )
+custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
+text = "02. Spikes Yikes"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

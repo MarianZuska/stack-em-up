@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=2]
+[gd_scene load_steps=147 format=2]
 
 [ext_resource path="res://Resources/Sprites/DungeonTiles.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Controllers/PlayerController.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Controllers/SceneChanger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Objects/Exit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Resources/Fonts/ChiKareGo.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1327,6 +1328,9 @@ resource_local_to_scene = true
 } ]
 4/z_index = 0
 
+[sub_resource type="DynamicFont" id=138]
+font_data = ExtResource( 8 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource( 4 )]
@@ -1337,9 +1341,24 @@ tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -6
 
 [node name="PlayerController" parent="." instance=ExtResource( 5 )]
 position = Vector2( 68.5109, 164.125 )
+player_root_nodes = [ NodePath("../Player1") ]
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 168, 88 )
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 240, 88 )
+
+[node name="OptionName" type="Label" parent="."]
+margin_left = -16.0
+margin_right = 416.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 288.78, 79.6416 )
+custom_fonts/font = SubResource( 138 )
+custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
+text = "00. Level Base"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
