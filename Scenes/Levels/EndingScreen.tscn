@@ -1239,19 +1239,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DeathCounter2" type="Label" parent="TileMap"]
-margin_left = 304.0
+[node name="BonusLevels" type="Label" parent="TileMap"]
+margin_left = 288.0
 margin_top = 200.0
-margin_right = 523.0
+margin_right = 507.0
 margin_bottom = 248.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 119 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "There are also some bonus
-levels accessable via the 
+levels accessible via the 
 level selector"
 align = 1
-script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
