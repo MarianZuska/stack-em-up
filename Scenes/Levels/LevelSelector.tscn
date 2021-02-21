@@ -1522,8 +1522,8 @@ position = Vector2( 248, 88 )
 next_level = "res://Scenes/Levels/Level14.tscn"
 
 [node name="Exit17" parent="." instance=ExtResource( 7 )]
-position = Vector2( 280, 88 )
-next_level = "res://Scenes/Levels/Level15.tscn"
+position = Vector2( 312, 88 )
+next_level = "res://Scenes/Levels/Level16.tscn"
 
 [node name="BackGround17" type="Sprite" parent="."]
 position = Vector2( 88, 176 )
@@ -1870,5 +1870,5 @@ __meta__ = {
 }
 
 [node name="Exit19" parent="." instance=ExtResource( 7 )]
-position = Vector2( 312, 88 )
-next_level = "res://Scenes/Levels/Level16Marian.tscn"
+position = Vector2( 280, 88 )
+next_level = "res://Scenes/Levels/Level15.tscn"

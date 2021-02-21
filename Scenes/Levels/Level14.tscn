@@ -1435,29 +1435,23 @@ position = Vector2( 376, 232 )
 
 [node name="TimedBlock" parent="." instance=ExtResource( 9 )]
 position = Vector2( 128, 184 )
-time = 1.0
 
 [node name="TimedBlock2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 176, 160 )
-time = 1.0
 do_invert = true
 
 [node name="TimedBlock10" parent="." instance=ExtResource( 9 )]
 position = Vector2( 240, 144 )
-time = 1.0
 
 [node name="TimedBlock21" parent="." instance=ExtResource( 9 )]
 position = Vector2( 328, 168 )
-time = 1.0
 
 [node name="TimedBlock11" parent="." instance=ExtResource( 9 )]
 position = Vector2( 88, 160 )
-time = 1.0
 do_invert = true
 
 [node name="TimedBlock20" parent="." instance=ExtResource( 9 )]
 position = Vector2( 288, 184 )
-time = 1.0
 do_invert = true
 
 [node name="LevelName" type="Label" parent="."]
