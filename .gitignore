@@ -13,3 +13,5 @@ data_*/
 
 # Builds
 Builds*
+export_to_nishna.sh
+package.sh
