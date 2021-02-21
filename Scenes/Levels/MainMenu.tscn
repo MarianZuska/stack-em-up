@@ -8,7 +8,7 @@
 [ext_resource path="res://Resources/Sprites/Tileset.png" type="Texture" id=6]
 [ext_resource path="res://Resources/Sprites/Player-Sheet.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=138]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -1207,7 +1207,7 @@ margin_bottom = 14.0
 margin_right = 7.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = ">"
 
@@ -1217,7 +1217,7 @@ margin_right = 93.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 82, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "Start"
 
@@ -1234,7 +1234,7 @@ margin_bottom = 14.0
 margin_right = 7.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = ">"
 
@@ -1244,7 +1244,7 @@ margin_right = 93.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 42, 0 )
 rect_pivot_offset = Vector2( 288.78, 79.6416 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "Level Selector"
 
@@ -1261,7 +1261,7 @@ margin_bottom = 14.0
 margin_right = 7.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = ">"
 
@@ -1270,7 +1270,7 @@ margin_left = 11.0
 margin_right = 93.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 82, 0 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "Options"
 
@@ -1287,7 +1287,7 @@ margin_bottom = 14.0
 margin_right = 7.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 7, 0 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = ">"
 
@@ -1296,7 +1296,7 @@ margin_left = 11.0
 margin_right = 93.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 82, 0 )
-custom_fonts/font = SubResource( 138 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 1, 0.72549, 0, 1 )
 text = "Exit"
 

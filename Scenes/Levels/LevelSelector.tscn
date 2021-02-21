@@ -1868,3 +1868,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Exit19" parent="." instance=ExtResource( 7 )]
+position = Vector2( 312, 88 )
+next_level = "res://Scenes/Levels/Level16Marian.tscn"
