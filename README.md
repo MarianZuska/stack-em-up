@@ -25,11 +25,5 @@ Reset with R
 Open Menu with ESCAPE
 
 
-
-This project is open source:
-
-https://github.com/MarianZuska/stack-em-up 
-
-
 Music by: DeltaBreaker on OpenGameArt
 Font by: Giles Booth on Pentacom
