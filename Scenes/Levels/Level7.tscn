@@ -1398,7 +1398,7 @@ position = Vector2( 120, 168 )
 buttons = [ NodePath("../Button2") ]
 
 [node name="ThrowSign" type="Sprite" parent="."]
-position = Vector2( 191.027, 191.516 )
+position = Vector2( 64, 80 )
 texture = ExtResource( 13 )
 
 [node name="BackGround1" type="Sprite" parent="."]
